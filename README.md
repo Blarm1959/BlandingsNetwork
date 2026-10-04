@@ -2,6 +2,8 @@
 
 Authoritative configuration and change history for the Blandings home network.
 
+Start with [BlandingsNetwork.md](BlandingsNetwork.md), the master overview and index. Architecture, hardware, services, rebuild, disaster recovery, history and evidence each have focused Markdown pages. Confirmed current settings are separate from historical HomeNetwork and chat recovery leads. The full [device inventory](01-Architecture/DeviceInventory.md), [GarageSwitch record](02-Hardware/GarageSwitch.md) and [verification backlog](07-Evidence/Verification.md) are linked from the overview.
+
 The main reference is:
 
 ```text
@@ -40,6 +42,7 @@ PSTP manages the normal release/version metadata.
 
 | Version | Type | Notes |
 |---------|------|-------|
+| v1.0.6 | Package | Released from imported Change Package. |
 | v1.0.5 | Package | Released from imported Change Package. |
 | v1.0.4 | Package | Released from imported Change Package. |
 | v1.0.3 | Package | Released from imported Change Package. |

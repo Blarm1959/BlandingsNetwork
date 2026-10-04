@@ -98,3 +98,8 @@ All 21 returned recent ChatGPT conversations were screened. Four supplied materi
 
 **No audited networking chat is cleared for deletion.** This ledger preserves what was recoverable, makes the missing scope visible and points to the next evidence needed.
 
+
+
+## Repository recovery update — 5 October 2026
+
+HomeNetwork provides historical evidence for Netgear GS308E, a FR24 Raspberry Pi named WDL-RPI3-FLIGHT-01, full device exports and router scripts, despite the earlier no-match results in returned chat portions. Those chat-search findings describe only their stated scope. See [HomeNetwork review](../07-Evidence/HomeNetworkReview.md) and [device inventory](../01-Architecture/DeviceInventory.md). The numbered garage-port map remains unavailable. The new repository evidence is historical and has not been promoted to live confirmed settings.

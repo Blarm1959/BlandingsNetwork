@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "project": "BlandingsNetwork",
-  "version": "1.0.5",
-  "githubSource": "v1.0.5",
+  "version": "1.0.6",
+  "githubSource": "v1.0.6",
   "zipPrefix": "BlandingsNetwork-",
   "port": 0,
   "packageChanges": false,
