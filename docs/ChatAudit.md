@@ -1,5 +1,7 @@
 # BlandingsNetwork chat audit
 
+**Latest device-name pass (baseline v1.0.4):** searched WDL-Flight-01 and GarageSwitch variants in the returned portions of all 75 listed ChatGPT chats and returned summaries/text from 25 readable listed Codex chats, following available Codex older-page cursors to the end. Two other listed Codex chats were unreadable. Garage switch diagram supplies printable-label requirements and seven artifact names; WDL-Flight-01 has no retrieved match. This extends coverage only for these two name families. See [KeywordAudit.md](KeywordAudit.md#additional-device-name-pass-wdl-flight-01-and-garageswitch). Older ChatGPT turns, unlisted active chats and original PDFs remain gaps.
+
 Audit date: 4 October 2026. Baseline: local released v1.0.2.
 
 **Update after v1.0.3:** the explicit keyword pass has now searched the returned text from 75 listed ChatGPT chats (22 recent, all 53 archived). It includes the 33 previously title-only archived chats and one newly listed recent chat. The earlier 41-chat scope below describes the first pass; it is retained as audit history, not the current coverage total. [KeywordAudit.md](KeywordAudit.md) records the expanded scope, term results, additional CarFinder LXC evidence and continuing older-history limits.

@@ -2,7 +2,7 @@
 
 **Authoritative master record for the Blandings home network**
 
-Documentation review: **4 October 2026**. Released baseline for this revision: **v1.0.3**.
+Documentation review: **4 October 2026**. Released baseline for this revision: **v1.0.4**.
 This revision is a documentation Change Package, not a released version or a network change.
 
 > This file records tested decisions as well as the current configuration. Do not replace a confirmed design with a theoretically preferable alternative unless new evidence or changed hardware/software justifies reopening the decision.
@@ -22,6 +22,8 @@ Read this file before making recommendations. The user's confirmed current archi
 | UNKNOWN | Evidence is missing; do not fill the gap with a default or assumption. |
 
 The review used local released files and available recent turns from named chats. The explicit keyword pass searched returned text from all 75 listed ChatGPT chats: 22 recent and all 53 archived chats across two pages, including the 33 archived chats previously screened only by title. Previously retrieved portions were reused where available. The recent listing is capped at 50 entries across ChatGPT and Codex and has no pagination parameter. Most chat reads returned only five recent turns with no older-page cursor. This is not an exhaustive account-wide history search. See [the coverage and findings ledger](docs/ChatAudit.md) and [the keyword results](docs/KeywordAudit.md).
+
+The subsequent WDL-Flight-01/GarageSwitch search also examined returned summaries/text from 25 readable listed Codex chats, following their available older-page cursors to the end; two other listed Codex chats were unreadable. This extends the audit for those two name families only. It found GarageSwitch in S9 and no WDL-Flight-01 match in the retrieved history.
 
 No router, switch, Pi-hole, Proxmox or NAS was inspected. Chat modification dates are not test dates. Old assistant claims are evidence of a proposal or discussion, not proof of successful operation. Assistant example names, IP addresses and container IDs must not become inventory entries.
 
@@ -276,6 +278,20 @@ S19 preserves the user's final helper requirement: `cddocker.sh` should print on
 - S14 records an LXC backup blocked by `config locked (mounted)`. The returned advice suggested investigating mounts before clearing a stale lock, but no actual CTID, fix or successful backup was returned. The example ID 123 is not a known container. Retain the incident and recover its outcome; do not run old unlock advice automatically.
 - S20 records a printer factory reset changing its cloud ePrint identity and a user report that re-enrolment seemed complete. `HP Envy Photo 6230` is an assistant-supplied model candidate; `192.168.52.45` is explicitly an example IP. Printer hostname/MAC/address, actual model and local printing setup remain unknown. Cloud identifiers are not LAN hostnames; current identifiers should be held in the user's private inventory if needed.
 
+### GarageSwitch diagram and device-name recovery (S9)
+
+**HISTORICAL USER REQUIREMENTS, 21 August 2025:** the user requested an A4 landscape PDF for printing, then an A5 version to print and stick on the switch, A6/A7 versions to inspect, and A4 sheets containing two A5 or four A6 diagrams. The final returned request rotates each of the four diagrams by 90 degrees to increase its size while retaining four on A4.
+
+The assistant supplied these exact artifact names: `GarageSwitch.pdf`, `GarageSwitch_A5.pdf`, `GarageSwitch_A6.pdf`, `GarageSwitch_A7.pdf`, `GarageSwitch_A4_with_2xA5.pdf`, `GarageSwitch_A4_with_4xA6.pdf` and `GarageSwitch_A4_with_4xA6_rotated.pdf`. These names are recovery/search identifiers; the files themselves were not recovered or inspected, and no claim of successful printing is implied. An eight-A7 sheet and combined multi-page PDF were offered, without a returned user request or delivered file.
+
+`GarageSwitch` is the historical diagram label. Its current management hostname, correspondence to the TP-Link TL-SG1218MPE, port assignments, uplink, PoE consumers and connected device names remain unverified. The assistant proposed a title mentioning that model; this alone does not prove the diagram's device mapping. Preserve the confirmed switch model and released-record address separately.
+
+### WDL-Flight-01 recovery lead
+
+The user supplied `WDL-Flight-01` as a device/chat search target on 4 October 2026. A case-insensitive search including separator variants found no match in the retrieved portions of 75 listed ChatGPT chats or the returned summaries/text of 25 readable listed Codex chats. Two further listed Codex chats could not be read. Available Codex older-page cursors were followed to the end; older ChatGPT turns remain unavailable, so this is not complete account-history coverage.
+
+The name alone does not establish Raspberry Pi hardware, an ADS-B/Flightradar role, an address, a garage-switch port or active/retired status. Keep those details UNKNOWN until original user evidence is recovered. Do not infer relationships from the word Flight or merge it with another device.
+
 ### Additional LXC: CarFinder (S25/S26)
 
 **HISTORICAL USER EVIDENCE, 3 October 2026:** shell prompts show `root@carfinder:/opt/carfinder` and `.venv` use. User test output records successful external Ford API responses. This is evidence of an application host/path and outbound access at that time, not proof of its current network address or container ID.
@@ -313,6 +329,8 @@ All items below are OPEN. Record observation date, source, actual values and use
 | V15 | History | Complete chat audit | Obtain older conversation turns and original attachments, search unlisted active chats and recover switch diagrams/device inventories. Close only when coverage is explicit and reviewed. |
 | V16 | Inventory | Keyword gaps | Recover Netgear, Raspberry Pi/RPi, Flightradar/FR24 and ADS-B history from unreturned older chats/attachments; record actual devices, addresses and active/retired state only with evidence. |
 | V17 | Inventory | CarFinder LXC | Verify current host/location/CTID/address, service and routes; reconcile candidate 10.83.59.181:8501 with confirmed 10.59 LAN and verify Laptop 1 name. |
+| V18 | Inventory | WDL-Flight-01 | Recover original chat/attachments and verify actual hostname, role, hardware, address/MAC, services, location, connectivity and active/retired status; search remains incomplete. |
+| V19 | Recovery | GarageSwitch | Recover original diagram PDFs and earlier chat turns; verify current switch identity/hostname, management address, port labels, uplink and PoE consumers. Preserve the requested printable label layout. |
 
 Suggested first evidence batch: current DNS Director, WAN DNS, LAN DHCP and Guest Network Pro pages, followed by the current script files and `cru l`. Capture existing state before considering edits. Keep credentials, VPN private keys and tokens outside this record; document where the user can retrieve them privately.
 
@@ -331,7 +349,7 @@ For each component record: backup method; contents covered; private storage loca
 
 ### Repository workflow
 
-- Established project: BlandingsNetwork, `Blarm1959/BlandingsNetwork`; released baseline v1.0.3 verified in local metadata and release history for this revision.
+- Established project: BlandingsNetwork, `Blarm1959/BlandingsNetwork`; released baseline v1.0.4 verified in local metadata and release history for this revision.
 - PowerShellTools released baseline supplied by the user: v2.7.4 (S1/S3).
 - Change Package name: `BlandingsNetwork-Changes-v<version>.zip`; filename is the intended release version, not an applied version change.
 - Include only changed files. Normally exclude `release.json`, `build-info.json`, `package-lock.json` and release-history-only README changes. PSTP owns versioning, commits, tags and pushes.
@@ -372,4 +390,8 @@ Released documentation added evidence/status distinctions, explicit contradictio
 
 Released broader audit added NAS/laptop/Restic, heating automation, media-service and infrastructure recovery leads plus a coverage ledger. Local metadata and Git history confirm the release.
 
-The subsequent keyword pass searches all 75 listed ChatGPT returned portions, adds CarFinder LXC evidence and an address conflict, and records explicit device/service gaps. It does not assert a new release or newly tested network behaviour.
+### v1.0.4
+
+Released keyword audit searched all 75 listed ChatGPT returned portions, added CarFinder LXC evidence and an address conflict, and recorded explicit device/service gaps. Local metadata and Git history confirm the release.
+
+The subsequent WDL-Flight-01/GarageSwitch name search and recovered printable-diagram requirements are unreleased documentation changes. They do not establish newly tested network behaviour.

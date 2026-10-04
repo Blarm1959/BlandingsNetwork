@@ -1,6 +1,6 @@
 # BlandingsNetwork keyword audit
 
-Audit date: 4 October 2026. Released baseline: v1.0.3. This audit accompanies an unreleased documentation Change Package.
+Audit date: 4 October 2026. The initial keyword audit was released in v1.0.4, having used v1.0.3 as its baseline. The additional device-name pass below uses released v1.0.4 and accompanies an unreleased documentation Change Package.
 
 ## Scope and limits
 
@@ -84,4 +84,68 @@ All titles below are the exact returned chat titles. IDs allow matching to sourc
 ## Remaining recovery work
 
 Recover older active chats, older turns and original attachments before claiming complete coverage. Prioritise the four no-match families, original garage switch diagrams/port labels, device names and addresses, current container inventory and the CarFinder address conflict. Keep new evidence in historical/verification sections until the user confirms the current working state. The master record backlog V15–V17 tracks these gaps.
+
+## Additional device-name pass: WDL-Flight-01 and GarageSwitch
+
+Date: 4 October 2026. The recent and both archived listings were refreshed. Searched returned user/assistant text from all 75 listed ChatGPT chats, reusing cached portions and refreshing Blandings Network 1 and Garage switch diagram with a 20,000-character allowance. The source set remains 22 recent and 53 archived ChatGPT chats. Searches were case-insensitive and allowed spaces, underscores or hyphens in WDL-Flight-01 and GarageSwitch/Garage Switch.
+
+Expanded this specific name pass to the other 27 listed Codex chats: 25 were readable and two failed because their host was unavailable. All available older-page cursors for the 25 readable chats were followed to the end. Codex returned summaries/text are not necessarily full transcripts or full tool outputs. The current audit chat was excluded to avoid counting its own search requests as historical findings.
+
+| Name | ChatGPT matches | Readable Codex matches | Finding |
+|---|---:|---:|---|
+| WDL-Flight-01, including separator variants | 0 | 0 | User-supplied recovery target only; hardware, role, IP and switch connection unknown. |
+| GarageSwitch / Garage Switch | 1 | 0 | Garage switch diagram (S9); printable-diagram requirements and artifact names below. |
+
+Neither result establishes full account-history coverage. Older active ChatGPT entries are not listed; earlier ChatGPT turns and original diagram files remain inaccessible. Browser access was rechecked and ChatGPT was signed out. No name match is evidence that WDL-Flight-01 is absent or retired.
+
+### Relevant GarageSwitch details added to the master
+
+User requirements in the returned 21 August 2025 turns: A4 landscape printout; A5 version to print and stick on the switch; A6/A7 inspection versions; two A5 or four A6 diagrams on A4; finally rotate the four diagrams 90 degrees for a larger fit. These establish requested layouts, not successful printing or verified wiring.
+
+Exact assistant-delivered filenames:
+
+- `GarageSwitch.pdf`
+- `GarageSwitch_A5.pdf`
+- `GarageSwitch_A6.pdf`
+- `GarageSwitch_A7.pdf`
+- `GarageSwitch_A4_with_2xA5.pdf`
+- `GarageSwitch_A4_with_4xA6.pdf`
+- `GarageSwitch_A4_with_4xA6_rotated.pdf`
+
+Original bytes, port assignments and earlier design turns were not returned. An eight-A7 sheet and combined multi-page PDF were only offered. A proposed title names TP Link TL-SG1218MPE; that assistant proposal does not verify current switch identity or its management hostname. No WDL-Flight-01/garage-port relationship was recovered. Master backlog V18/V19 records the outstanding recovery work.
+
+### Codex coverage for this specific name pass
+
+Titles were identifier-only and are reproduced verbatim. “All available pages” means the returned cursor ended, not that every original message/tool output was supplied.
+
+| Exact returned title | Returned turns searched | Coverage |
+|---|---:|---|
+| 01a107d7-48a2-74c7-8d53-47a48513607c | 1 | All available pages; no name match |
+| 01a0441e-032e-7721-9a21-f1b768e86049 | 213 | All available pages; no name match |
+| 01a0d830-e005-77f5-8c4a-738601fb904c | 15 | All available pages; no name match |
+| 01a044b1-b3fc-76a3-a9c9-86f114474067 | 10 | All available pages; no name match |
+| 01a0c4b7-82ae-7142-a419-b0cc0a7d305f | 10 | All available pages; no name match |
+| 01a0a9d3-1dc4-7211-bac6-aa5fa40d2046 | 7 | All available pages; no name match |
+| 01a0d46b-7dcb-7585-81b3-bc89978c706f | 5 | All available pages; no name match |
+| 01a0d057-393b-7706-93eb-8f25ab35205f | 4 | All available pages; no name match |
+| 01a0cfbe-6347-713e-9d39-98fbe7b12076 | 8 | All available pages; no name match |
+| 01a0c3c5-66bf-7192-bc80-52b535c53074 | 1 | All available pages; no name match |
+| 01a0be34-0ebc-7863-a7b8-c2873d2a006c | 3 | All available pages; no name match |
+| 01a0be33-5053-7f03-bc32-afcdc9cbc072 | 1 | All available pages; no name match |
+| 01a0be10-fec3-78b2-8a09-124b4dd3a07f | — | Unreadable: host unavailable |
+| 01a0baa0-479b-7fd0-99cd-b79af438c05a | — | Unreadable: host unavailable |
+| 01a0b4f4-40de-7c62-affc-b4b60cf7807f | 11 | All available pages; no name match |
+| 01a0b3e6-4d48-7471-b926-f30900c13073 | 2 | All available pages; no name match |
+| 01a0b3e5-f5dd-7a62-8b59-d0a029306057 | 1 | All available pages; no name match |
+| 01a0aba4-114f-7161-9581-5f69e66b005e | 105 | All available pages; no name match |
+| 01a0b035-1995-7bc3-aad2-9cb64ddc405a | 2 | All available pages; no name match |
+| 01a0aa2b-6238-7b32-aa9c-15e4534a0051 | 1 | All available pages; no name match |
+| 01a0a098-d5a6-7710-859a-047682c6307d | 1 | All available pages; no name match |
+| 01a05df8-fc85-72b2-a37f-39c72908a044 | 13 | All available pages; no name match |
+| 01a04472-b0df-7c82-909f-96eff785d067 | 1 | All available pages; no name match |
+| 01a04471-4b4c-7f72-91cb-e5161a10b05d | 0 | All available pages; no name match |
+| 01a04418-d850-7fc0-8812-9421c399d078 | 0 | All available pages; no name match |
+| 01a04249-daf2-7c72-8cf4-f4670e6b106d | 0 | All available pages; no name match |
+| 01a04249-dba9-7002-936e-cc5235e50047 | 0 | All available pages; no name match |
+
 
