@@ -2,7 +2,7 @@
 
 **Authoritative master record for the Blandings home network**
 
-Documentation review: **4 October 2026**. Released baseline for this revision: **v1.0.2**.
+Documentation review: **4 October 2026**. Released baseline for this revision: **v1.0.3**.
 This revision is a documentation Change Package, not a released version or a network change.
 
 > This file records tested decisions as well as the current configuration. Do not replace a confirmed design with a theoretically preferable alternative unless new evidence or changed hardware/software justifies reopening the decision.
@@ -21,7 +21,7 @@ Read this file before making recommendations. The user's confirmed current archi
 | SUPERSEDED | Replaced design; do not restore it as current. |
 | UNKNOWN | Evidence is missing; do not fill the gap with a default or assumption. |
 
-The review used local released files and available recent turns from named chats. The broader audit read the returned portions of all 21 ChatGPT chats in the recent listing and 20 relevant archived chats. The archive listing had 53 titles across two pages; 33 unrelated titles were not opened. The recent listing is capped at 50 entries across ChatGPT and Codex and has no pagination parameter. Most chat reads returned only five recent turns with no older-page cursor. This is not an exhaustive account-wide content search. See [the coverage and findings ledger](docs/ChatAudit.md).
+The review used local released files and available recent turns from named chats. The explicit keyword pass searched returned text from all 75 listed ChatGPT chats: 22 recent and all 53 archived chats across two pages, including the 33 archived chats previously screened only by title. Previously retrieved portions were reused where available. The recent listing is capped at 50 entries across ChatGPT and Codex and has no pagination parameter. Most chat reads returned only five recent turns with no older-page cursor. This is not an exhaustive account-wide history search. See [the coverage and findings ledger](docs/ChatAudit.md) and [the keyword results](docs/KeywordAudit.md).
 
 No router, switch, Pi-hole, Proxmox or NAS was inspected. Chat modification dates are not test dates. Old assistant claims are evidence of a proposal or discussion, not proof of successful operation. Assistant example names, IP addresses and container IDs must not become inventory entries.
 
@@ -53,6 +53,8 @@ No router, switch, Pi-hole, Proxmox or NAS was inspected. Chat modification date
 | S22 | `Neoflo Hub Upgrade Needs`, chat `6aa03303-d6f4-83eb-8bcf-c7015514a347` | 8 September 2026 assistant interpreted user screenshots as Gen 2 / firmware 2218; screenshots unavailable. G3/RF Switch discussion is a proposal. |
 | S23 | `Restore ABAAS Database`, chat `6aa816bc-9030-83eb-9442-09fca2251381` | 14 September 2026 user recalls Restic backups; NAS/host mapping is assistant speculation. |
 | S24 | `INV-IONOS-01`, chat `6a7d91f8-a678-83eb-822a-857804062175` | 24–25 September 2026 VHDX/split-download history; no current home-network address. |
+| S25 | `Carfinder 2`, chat `6ac0c849-17a4-83ed-8e08-b1b31059b34b` | 3 October 2026 user shell/output shows carfinder, /opt/carfinder and successful external API probes. Address/service labels are assistant summary claims. |
+| S26 | `Claude export download guide`, chat `6abfd2c1-0894-83eb-b5a8-ec05188874f3` | 2–3 October 2026 user names the CarFinder LXC update command and supplies deployment output; assistant gives address/service and laptop-name candidates. |
 
 ## 2. Current confirmed architecture
 
@@ -240,7 +242,7 @@ Preserve actual live files and any original locked copies byte-for-byte. Record 
 - **HISTORICAL USER RECOLLECTION:** ABAAS may exist in Restic backups from earlier years (S23). Repository location, snapshot IDs, backup scripts, retention and restore outcome were not recovered.
 - **CANDIDATE NAME:** `INV-NAS-012` appears only in conditional assistant advice in S23. It is not a confirmed name for the Synology at `10.59.40.131`, and must not be mapped to it without evidence.
 - **HISTORICAL ARTIFACT NAME:** `INV-IONOS-01` appears as a chat and VHDX/split-download name (S24). User confirms split parts reached OneDrive. The assistant describes an 83 GB VHDX, ten split parts, `INV-IONOS-01-Hyper-V-Setup.pdf` and `Join-INV-IONOS-01.zip`; files were not inspected. This does not establish a live home host or IP.
-- **EXCLUDE FROM INVENTORY:** `INV-LAP-01`, `192.168.1.120`, `.150` and `.132` in S10 are explicitly assistant examples. Do not assign them to either laptop.
+- **EXCLUDE FROM CONFIRMED INVENTORY:** `INV-LAP-01`, `192.168.1.120`, `.150` and `.132` in S10 are explicitly assistant examples. Later S25/S26 summaries use `INV-LAP-01` as a specific Laptop 1 candidate, but no returned user evidence verifies that mapping. Preserve the later candidate separately; do not assign the example IPs to either laptop.
 
 ### NeoHub, automation and zones (S13/S22)
 
@@ -274,6 +276,20 @@ S19 preserves the user's final helper requirement: `cddocker.sh` should print on
 - S14 records an LXC backup blocked by `config locked (mounted)`. The returned advice suggested investigating mounts before clearing a stale lock, but no actual CTID, fix or successful backup was returned. The example ID 123 is not a known container. Retain the incident and recover its outcome; do not run old unlock advice automatically.
 - S20 records a printer factory reset changing its cloud ePrint identity and a user report that re-enrolment seemed complete. `HP Envy Photo 6230` is an assistant-supplied model candidate; `192.168.52.45` is explicitly an example IP. Printer hostname/MAC/address, actual model and local printing setup remain unknown. Cloud identifiers are not LAN hostnames; current identifiers should be held in the user's private inventory if needed.
 
+### Additional LXC: CarFinder (S25/S26)
+
+**HISTORICAL USER EVIDENCE, 3 October 2026:** shell prompts show `root@carfinder:/opt/carfinder` and `.venv` use. User test output records successful external Ford API responses. This is evidence of an application host/path and outbound access at that time, not proof of its current network address or container ID.
+
+The user explicitly identifies the CarFinder LXC update command as `cd /opt/carfinder && bash admin/update_lxc.sh` (S26). It is preserved as the named project workflow, not executed by this audit.
+
+Assistant summaries name `carfinder-streamlit.service`, app endpoint `http://10.83.59.181:8501`, and Laptop 1 `INV-LAP-01` with repository folder `D:\Git\Repos\Blarm1959`. These are specific recovery candidates, not freshly verified values. The endpoint is outside the confirmed main LAN `10.59.0.0/16`; its date does not justify replacing the current baseline or assuming another active subnet. Verify where this LXC runs, its actual address/CTID, service/listener, routes and current version. Do not convert the endpoint into a new address-group recommendation.
+
+### Explicit device/service keyword gaps
+
+The 75-chat returned-text search found Heatmiser/NeoHub, Pi-hole/pihole, Unbound, Proxmox/LXC, Emby, Dispatcharr, Synology, Garage Switch and TP-Link/TL-SG1218MPE references. It found **no matches for Netgear, Raspberry Pi/RPi, Flightradar/FR24 or ADS-B/dump1090/readsb** within those retrieved portions.
+
+These are evidence gaps, not proof that the devices/services are absent or decommissioned. Do not assume Pi-hole runs on Raspberry Pi: its confirmed current host is an LXC. Recover original chats/attachments for any Netgear switch/router, Raspberry Pi receiver or ADS-B/Flightradar feeder before assigning model, name, IP, service, location, backup or retirement status.
+
 ## 7. Verification and recovery backlog
 
 All items below are OPEN. Record observation date, source, actual values and user confirmation when closing an item. Old chats can supply context, but exact current equipment settings need current evidence.
@@ -295,6 +311,8 @@ All items below are OPEN. Record observation date, source, actual values and use
 | V13 | Recovery | Heating automation | Actual hub model/build/address, openHAB versus Home Assistant roles, Legacy API state, custom binding source/JAR and tested heatmiser_summary rule. Confirm any G3/neoFlo change separately. |
 | V14 | Recovery | Media services | Current LXC IDs/addresses, services/versions, exporter files, real schedules/timezone, shared mount mapping/permissions and the outcome of Emby scan/installer experiments. |
 | V15 | History | Complete chat audit | Obtain older conversation turns and original attachments, search unlisted active chats and recover switch diagrams/device inventories. Close only when coverage is explicit and reviewed. |
+| V16 | Inventory | Keyword gaps | Recover Netgear, Raspberry Pi/RPi, Flightradar/FR24 and ADS-B history from unreturned older chats/attachments; record actual devices, addresses and active/retired state only with evidence. |
+| V17 | Inventory | CarFinder LXC | Verify current host/location/CTID/address, service and routes; reconcile candidate 10.83.59.181:8501 with confirmed 10.59 LAN and verify Laptop 1 name. |
 
 Suggested first evidence batch: current DNS Director, WAN DNS, LAN DHCP and Guest Network Pro pages, followed by the current script files and `cru l`. Capture existing state before considering edits. Keep credentials, VPN private keys and tokens outside this record; document where the user can retrieve them privately.
 
@@ -313,7 +331,7 @@ For each component record: backup method; contents covered; private storage loca
 
 ### Repository workflow
 
-- Established project: BlandingsNetwork, `Blarm1959/BlandingsNetwork`; released baseline v1.0.2 verified in local metadata/tag for this revision.
+- Established project: BlandingsNetwork, `Blarm1959/BlandingsNetwork`; released baseline v1.0.3 verified in local metadata and release history for this revision.
 - PowerShellTools released baseline supplied by the user: v2.7.4 (S1/S3).
 - Change Package name: `BlandingsNetwork-Changes-v<version>.zip`; filename is the intended release version, not an applied version change.
 - Include only changed files. Normally exclude `release.json`, `build-info.json`, `package-lock.json` and release-history-only README changes. PSTP owns versioning, commits, tags and pushes.
@@ -350,4 +368,8 @@ Initial master documentation established core architecture and addressing, Guest
 
 Released documentation added evidence/status distinctions, explicit contradictions, five archived ASUS/Merlin sources, verification/recovery criteria and chat-retirement rules. Release verified in local metadata and tag during the broader audit.
 
-The broader 4 October 2026 audit adds NAS/laptop/Restic, heating automation, media-service and infrastructure recovery leads plus a coverage ledger. It does not assert a new release or newly tested network behaviour.
+### v1.0.3
+
+Released broader audit added NAS/laptop/Restic, heating automation, media-service and infrastructure recovery leads plus a coverage ledger. Local metadata and Git history confirm the release.
+
+The subsequent keyword pass searches all 75 listed ChatGPT returned portions, adds CarFinder LXC evidence and an address conflict, and records explicit device/service gaps. It does not assert a new release or newly tested network behaviour.

@@ -2,6 +2,8 @@
 
 Audit date: 4 October 2026. Baseline: local released v1.0.2.
 
+**Update after v1.0.3:** the explicit keyword pass has now searched the returned text from 75 listed ChatGPT chats (22 recent, all 53 archived). It includes the 33 previously title-only archived chats and one newly listed recent chat. The earlier 41-chat scope below describes the first pass; it is retained as audit history, not the current coverage total. [KeywordAudit.md](KeywordAudit.md) records the expanded scope, term results, additional CarFinder LXC evidence and continuing older-history limits.
+
 ## Coverage and access limits
 
 This audit is **partial historical coverage, not a complete search of every chat in the account**.
@@ -62,7 +64,7 @@ All 21 returned recent ChatGPT conversations were screened. Four supplied materi
 | NeoHub 10.0.7.172 | Assistant recollection in September 2026 | Historical candidate, not current address evidence. |
 | INV-NAS-012 | Conditional assistant speculation | No confirmed mapping to Synology 10.59.40.131. |
 | INV-IONOS-01 | Chat/VM artifact name | Current host status, location and address unknown. |
-| INV-LAP-01 and 192.168.1.120/.150/.132 | Explicit assistant examples | Excluded from device inventory. |
+| INV-LAP-01 and 192.168.1.120/.150/.132 in the RDP chat | Explicit assistant examples | Excluded from confirmed device inventory. Later CarFinder summaries supply a separate specific INV-LAP-01 candidate; mapping is still unverified. |
 | 192.168.52.45 | Printer IP example | Excluded from device inventory. |
 | 192.168.1.0/24 in root-SSH advice | Generic example | Not an active access-control rule. |
 | 127.0.0.1 / localhost listener examples | Stack explanation | Not a recovered remote host or actual deployed port. |
