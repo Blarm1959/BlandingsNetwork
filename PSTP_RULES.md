@@ -1,0 +1,112 @@
+# PSTP Project Rules
+
+These rules apply to all projects managed using PowerShellTools / PSTP.
+
+## Change Packages
+
+Change packages created during ChatGPT development work must be named:
+
+`<Project>-Changes-v<version>.zip`
+
+Examples:
+
+`EnergyWatch-Changes-v0.3.1.zip`
+`Lipfty-Changes-v9.0.1.zip`
+`Quarto-Changes-v0.4.0.zip`
+
+The version in the filename is the intended PSTP release version. The Change Package itself must not directly update PSTP-managed version files; PSTP performs those updates during `Release -Zip`.
+
+## Package Contents
+
+A change package should contain only files that have actually been changed for that development step.
+
+Do not normally include files managed by the PSTP release system, including:
+
+- `release.json`
+- `build-info.json`
+- `package-lock.json`
+- release-history changes in `README.md`
+
+Include one of these only when the development change specifically requires that file to be changed.
+
+## Version Numbers
+
+ChatGPT-created change packages must not increment or alter the project release version.
+
+Versioning is owned by PSTP / ProjectRelease and is performed locally after the change package has been reviewed and applied.
+
+## Project Locations
+
+Projects may be stored on different drives on different computers.
+
+For example, a project may be under:
+
+`C:\bxd\...`
+
+or:
+
+`D:\bxd\...`
+
+Project scripts must not assume a fixed drive letter.
+
+Where possible, a project script should determine its own Git repository root dynamically.
+
+## Trace, Debug and Run Output
+
+PSTP itself does not move project trace, debug, diagnostic, test, simulation, or other temporary run-output files.
+
+This is the responsibility of each individual project's own run workflow.
+
+Before starting a new project run or generation, that project should move its known output files from the previous run into:
+
+`<ProjectRoot>\Old`
+
+Only files explicitly known by that project to be temporary/run output should be moved.
+
+Do not move files merely because their filenames contain words such as:
+
+- `trace`
+- `debug`
+- `diagnostic`
+- `log`
+
+Those names may also belong to genuine project source files.
+
+Historical files placed in `Old` should be retained unless specifically requested otherwise.
+
+If a filename already exists in `Old`, preserve the existing historical file rather than silently overwriting it.
+
+## Project Run Scripts
+
+Project run scripts should determine the repository root dynamically rather than hard-coding paths such as `C:\bxd` or `D:\bxd`.
+
+The normal PowerShell approach is:
+
+`git rev-parse --show-toplevel`
+
+Each project should maintain its own explicit list of files or folders that are outputs from a run and should be archived to `Old` before the next run.
+
+## App Repositories (public web apps from private source)
+
+A project can publish its runnable app to a separate public repository named `<Repo>-App` (for example `Lipfty` -> `Lipfty-App`) while its source repository stays private.
+
+- Publication is automatic: after every successful versioned `Release` (not `-NoBump`, not `-DryRun`), ProjectRelease checks for `<Repo>-App` next to the project folder, or on the same GitHub owner. If neither exists, nothing happens.
+- If the App repository exists on GitHub but not locally, it is cloned next to the project folder automatically.
+- The App repository mirrors the project's tracked files, excluding `tools/`, `docs/`, `test(s)/`, `Old/`, `.github/`, `.vs/`, `.vscode/`, `node_modules/`, `*.ps1`, `*.psm1`, `*.psd1`, `*.md`, `.git*` files, `package-lock.json` and `LICENSE`. Files removed from the app are removed from the App repository.
+- The App repository's own `README.md`, `LICENSE`, `CNAME`, `.nojekyll`, `.gitignore`, `.gitattributes` and `.github/` are never touched. `.nojekyll` is created if missing.
+- Each publication is committed as `Publish <Project> v<version>`, tagged `v<version>` and pushed. GitHub Pages on the App repository then serves the app.
+- A failed App publication is reported as a warning only; the main release has already been pushed. The next release republishes in full.
+- Optional per-project overrides in `release.json`:
+
+```json
+"app": {
+  "include": [ "tools/runtime-helper.js" ],
+  "exclude": [ "js/debug-*.js" ]
+}
+```
+
+## Source of Truth
+
+These rules are the permanent development conventions for projects using PowerShellTools.
+
+If instructions in a ChatGPT conversation conflict with this file, follow this file unless the user explicitly changes the rule.
