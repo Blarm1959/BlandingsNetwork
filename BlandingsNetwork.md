@@ -2,7 +2,7 @@
 
 **Authoritative master record for the Blandings home network**
 
-Documentation review: **4 October 2026**. Released baseline: **v1.0.1**.
+Documentation review: **4 October 2026**. Released baseline for this revision: **v1.0.2**.
 This revision is a documentation Change Package, not a released version or a network change.
 
 > This file records tested decisions as well as the current configuration. Do not replace a confirmed design with a theoretically preferable alternative unless new evidence or changed hardware/software justifies reopening the decision.
@@ -21,7 +21,9 @@ Read this file before making recommendations. The user's confirmed current archi
 | SUPERSEDED | Replaced design; do not restore it as current. |
 | UNKNOWN | Evidence is missing; do not fill the gap with a default or assumption. |
 
-The review used local released files and available recent turns from named chats. No router, switch, Pi-hole, Proxmox or NAS was inspected. Chat modification dates are not test dates. Old assistant claims are evidence of a proposal or discussion, not proof of successful operation.
+The review used local released files and available recent turns from named chats. The broader audit read the returned portions of all 21 ChatGPT chats in the recent listing and 20 relevant archived chats. The archive listing had 53 titles across two pages; 33 unrelated titles were not opened. The recent listing is capped at 50 entries across ChatGPT and Codex and has no pagination parameter. Most chat reads returned only five recent turns with no older-page cursor. This is not an exhaustive account-wide content search. See [the coverage and findings ledger](docs/ChatAudit.md).
+
+No router, switch, Pi-hole, Proxmox or NAS was inspected. Chat modification dates are not test dates. Old assistant claims are evidence of a proposal or discussion, not proof of successful operation. Assistant example names, IP addresses and container IDs must not become inventory entries.
 
 ### Source register
 
@@ -35,6 +37,22 @@ The review used local released files and available recent turns from named chats
 | S6 | `ASUS Merlin Setup 2`, chat `689b2920-8d30-8322-87f3-05462552ee2b` | Available turns dated 12 August 2025; old addresses/script variables and assistant-reported unused variables. Uploaded source contents unavailable. |
 | S7 | `Asus Merlin DDNS setup`, chat `68a0788f-fda4-8326-b46c-836795dd0602` | Available turns dated 16 August 2025; historical DDNS plan and user intent to use Merlin GUI certificate management. No current implementation confirmation. |
 | S8 | `ASUS Merlin setup summary`, chat `689f6b3e-3924-8332-bcb6-3af0fdf28a16` | Available turns dated 15 August 2025; user locked uploaded files at that time. File contents unavailable; old topology is superseded. |
+| S9 | `Garage switch diagram`, chat `68a78d22-92bc-832b-bb25-e3f446bed3b6` | 21 August 2025 returned turns name GarageSwitch PDF variants; diagrams/port map unavailable. |
+| S10 | `Allow laptop access remotely`, chat `6930c112-0dfc-832b-88c1-fede12c55e66` | 3–4 December 2025 user identifies two Windows 11 Pro laptops and a 15-minute screen timeout. RDP target names/IPs are examples. |
+| S11 | `Synology Drive Client overview`, chat `69314b02-06b4-8325-aad4-2635bd96f254` | 4 December 2025 user identifies Drive Client on a laptop; actual sync/backup tasks unknown. |
+| S12 | `Allow SSH root login`, chat `68f7d800-7108-8331-9813-a1d30dcac69f` | 21 October 2025 request and generic advice only; no host or implementation confirmation. |
+| S13 | `NeoHubAPI usage guide`, chat `690d2e35-3958-8325-8755-65b467daf4b5` | 25 November 2025 user logs/item code and assistant binding summary; final rule fix not confirmed by returned user evidence. |
+| S14 | `Proxmox LXC - Config locked (mounted)`, chat `691ef785-0094-8330-8fe6-e3025753c90d` | 20 November 2025 user reports backup failure; actual CTID and outcome unavailable. |
+| S15 | `Dispatcharr app overview`, chat `68f7d70e-0b74-8331-bcc3-412ce75456d7` | 31 October 2025 user-supplied installer helpers; proposed revisions are not deployed service evidence. |
+| S16 | `Using Dispatcharr with Emby`, chat `690f498c-ede4-832e-a51b-923405191981` | 11 November 2025 scan-stall observation and assistant workflow summary/template. |
+| S17 | `Xtream player options`, chat `68aba411-f388-8325-b131-522722ca0acb` | 7 September 2025 user requires Xtream API support; provider strings are placeholders. |
+| S18 | `Compare .NET and Dispatcharr stack`, chat `68fcfabe-d974-8329-bd35-9524f83acb59` | 25 October 2025 stack discussion; no live listeners or service states confirmed. |
+| S19 | `Docker app directory script`, chat `68fd4e46-9b20-832b-acce-0b100a82ca42` | 25 October 2025 helper design revised to print a directory for caller-side cd. |
+| S20 | `HP Ink re-enrollment steps`, chat `68ff6420-d358-8328-8ab1-947076d34282` | 27 October 2025 printer reset/cloud-identity history; model supplied by assistant and IP is an example. |
+| S21 | `Libpcre3 Debian status`, chat `68dd3055-feb4-8328-b2fe-8d85274658b5` | 1–2 October 2025 user reports missing runtime directories and corrects /data versus app paths; test plan outcome unavailable. |
+| S22 | `Neoflo Hub Upgrade Needs`, chat `6aa03303-d6f4-83eb-8bcf-c7015514a347` | 8 September 2026 assistant interpreted user screenshots as Gen 2 / firmware 2218; screenshots unavailable. G3/RF Switch discussion is a proposal. |
+| S23 | `Restore ABAAS Database`, chat `6aa816bc-9030-83eb-9442-09fca2251381` | 14 September 2026 user recalls Restic backups; NAS/host mapping is assistant speculation. |
+| S24 | `INV-IONOS-01`, chat `6a7d91f8-a678-83eb-822a-857804062175` | 24–25 September 2026 VHDX/split-download history; no current home-network address. |
 
 ## 2. Current confirmed architecture
 
@@ -167,6 +185,8 @@ Capture current files verbatim before documenting their behaviour. Record each s
 - **Reason superseded:** current user-confirmed addressing and split-tunnel VPN take precedence.
 - **Decision:** do not restore old addressing or VPN defaults from old scripts. Historical `10.52` VLAN ranges must not be confused with current guest `10.52.0.0/24`.
 
+Historical generated values in S5/S6/S8 additionally include LAN `10.0.0.0/16` / mask `255.255.0.0`, DHCP start `10.0.0.201` versus `10.0.0.210` in different copies, end `10.0.0.250`, media range `10.52.253.0/24`, SSID `BLARM-00`, generated SSID prefix `BLARM-` and reservation label prefix `ZDR-`. The old VLAN list named 52 Main, 53 IOT, 54 CCTV and 55 Guest. These are historical script proposals, not current SSIDs, reservations or active address groups. Do not preserve old wireless passwords in this record.
+
 ### D3. Guest DNS interception scripts — SUPERSEDED / PARTLY REJECTED
 
 - **Goal:** keep guests independent of Pi-hole and direct guest DNS to public Quad9.
@@ -213,6 +233,47 @@ The user reported empty packages and packages whose comments/formatting differed
 
 Preserve actual live files and any original locked copies byte-for-byte. Record hashes and compare archive contents before calling them a backup. Regenerated chat code is not a recovered original. Expired sandbox download links and missing uploaded contents were not recovered in this review. Do not reconstruct deployment scripts from truncated replies.
 
+### NAS, laptops and backup/name candidates (S10/S11/S23/S24)
+
+- **HISTORICAL USER EVIDENCE:** two laptops running Windows 11 Pro (S10); user changed a laptop screen timeout to 15 minutes. Sleep/hibernate Never was discussed, but the returned evidence does not prove the actual power plan, RDP enable state, successful connection or laptop names.
+- **HISTORICAL USER EVIDENCE:** Synology Drive Client on a laptop (S11). Task direction, source/target folders, NAS endpoint and retention remain unknown; do not assume two-way sync or backup is configured.
+- **HISTORICAL USER RECOLLECTION:** ABAAS may exist in Restic backups from earlier years (S23). Repository location, snapshot IDs, backup scripts, retention and restore outcome were not recovered.
+- **CANDIDATE NAME:** `INV-NAS-012` appears only in conditional assistant advice in S23. It is not a confirmed name for the Synology at `10.59.40.131`, and must not be mapped to it without evidence.
+- **HISTORICAL ARTIFACT NAME:** `INV-IONOS-01` appears as a chat and VHDX/split-download name (S24). User confirms split parts reached OneDrive. The assistant describes an 83 GB VHDX, ten split parts, `INV-IONOS-01-Hyper-V-Setup.pdf` and `Join-INV-IONOS-01.zip`; files were not inspected. This does not establish a live home host or IP.
+- **EXCLUDE FROM INVENTORY:** `INV-LAP-01`, `192.168.1.120`, `.150` and `.132` in S10 are explicitly assistant examples. Do not assign them to either laptop.
+
+### NeoHub, automation and zones (S13/S22)
+
+S13 contains user logs showing openHAB NeoHub socket traffic and device discovery on 25 November 2025. Thing identifier `neohub:neohub:192_168_1_172` is historical naming evidence; it does not by itself prove the configured socket address. S22 later recalls `10.0.7.172` only in assistant text. Both are historical and must not replace the released-record address `10.59.60.172`.
+
+The assistant interpreted September 2026 screenshots as **neoHub Gen 2, firmware 2218** (S22). The images were not available in this audit, so retain this as a candidate model/build pending verification. An earlier assistant summary also describes Gen 2 with Legacy API enabled (S13).
+
+User logs expose these historical Neo device names: `1st_Floor_Rads`, `Lounge`, `Dining`, `Snug`, `Utility`, `Kitchen`, `Hall_and_WC`, `Hot_Water`, `EnSuite`, `Bathroom`. They are zone names, not independently addressed LAN hosts. Item prefixes in user code include `Rads1F`, `HallWC`, `HW` and the matching room names, with `_Temp`, `_Setpoint` and `_TPS` items. Preserve the distinction between Thing IDs, Item names, zone names and hostnames.
+
+The assistant summary describes a custom openHAB binding adding `timeClockMode`, `awayMode` and `holidayMode`, publishing UNDEF for meaningless hot-water/time-clock temperatures, built using Maven/Java 21 and deployed to `/usr/share/openhab/addons/`. This is a recovery lead, not a preserved build. Capture the source revision, exact JAR, openHAB version, Items/Things/rules and current deployment before declaring it recoverable.
+
+**Recorded failure:** user logs show `Could not cast UNDEF to ... QuantityType` in `heatmiser_summary.rules`, followed by `Parse Error in heatmiser_summary` after attempted replacements. A later assistant summary claims resolution, but no returned user log/test confirms the final fix. Preserve the failure and verify the working rule; do not deploy an old generated replacement automatically.
+
+S22 describes Home Assistant integration, whereas S13 directly evidences openHAB. Whether both were used, whether there was a migration, and what remains current are UNKNOWN. The neoFlo/G3/RF Switch V2 discussion records contemplated purchases/upgrades only; no installation was confirmed. This audit does not validate compatibility or wiring advice.
+
+### Media services and implementation history (S15–S19/S21)
+
+HISTORICAL workflow in the assistant summary (S16): Dispatcharr PostgreSQL VOD data feeds STRM exports for Emby through shared Proxmox/LXC storage. Named files include `vod_export_vars.sh` and `vod_export_reset.sh`; proposed schedules are exporter 02:00 and Emby refresh 04:00. No live cron output, timezone or script files were recovered. Host `/mnt/pve/Share-VOD` and container `/mnt/Share-VOD/{XC_NAME}/` both appear; exact mount mappings and ownership remain unverified.
+
+The user reports a Movies scan became faster up to 90% and then stalled again (S16). Metadata/artwork was the assistant's diagnosis, not a verified root cause or successful fix. Preserve this as an unresolved experiment; do not record the suggested Emby settings as current.
+
+S15 contains user-supplied installer helpers for PostgreSQL, source deployment, Node.js and uv. S18 discusses Nginx, Gunicorn, Celery, Celery Beat, Daphne and PostgreSQL, but it does not establish which services currently run or their ports/IPs. S17's `DDD`/`UUU`/`PPP` are provider placeholders, not local DNS or computer names.
+
+S21 preserves a user correction: missing persistent folders belong under `/data`, not `/opt/dispatcharr/data`; `/opt/dispatcharr/app/*` is the application path in that discussion. Reported missing directories: `/data/logos`, `/data/recordings`, `/data/uploads/m3us`, `/data/uploads/epgs`, `/data/m3us`, `/data/epgs`, `/data/plugins`, `/data/db`, plus `$APP_DIR/logo_cache` and `$APP_DIR/media`. The proposed libpcre3 removal/test and directory fixes have no returned completion evidence. Do not turn old package-availability claims into current Debian guidance.
+
+S19 preserves the user's final helper requirement: `cddocker.sh` should print only the directory so the calling shell can change directory. Earlier generated variants tried to cd inside a child script and are superseded by that requirement. Deployment and installed location are unknown; keep this as development history rather than a live service.
+
+### Other infrastructure recovery leads (S9/S14/S20)
+
+- S9 names printed `GarageSwitch` diagrams, including A4/A5/A6/A7 and combined/rotated PDF variants. The returned turns contain no port assignments or diagram bytes. Recover an original diagram before claiming the physical map is preserved.
+- S14 records an LXC backup blocked by `config locked (mounted)`. The returned advice suggested investigating mounts before clearing a stale lock, but no actual CTID, fix or successful backup was returned. The example ID 123 is not a known container. Retain the incident and recover its outcome; do not run old unlock advice automatically.
+- S20 records a printer factory reset changing its cloud ePrint identity and a user report that re-enrolment seemed complete. `HP Envy Photo 6230` is an assistant-supplied model candidate; `192.168.52.45` is explicitly an example IP. Printer hostname/MAC/address, actual model and local printing setup remain unknown. Cloud identifiers are not LAN hostnames; current identifiers should be held in the user's private inventory if needed.
+
 ## 7. Verification and recovery backlog
 
 All items below are OPEN. Record observation date, source, actual values and user confirmation when closing an item. Old chats can supply context, but exact current equipment settings need current evidence.
@@ -230,6 +291,10 @@ All items below are OPEN. Record observation date, source, actual values and use
 | V9 | Recovery | Backups | Router configuration/JFFS, Pi-hole export plus Unbound config, Proxmox/LXC, switch and NAS configuration: backup locations, dates, coverage and restore prerequisites. |
 | V10 | Recovery | Restore validation | A user-approved restore procedure with dependency order, access prerequisites, rollback and evidence of a successful restore. No restore test has been completed in this review. |
 | V11 | History | Missing decisions | Exact VLAN failure evidence/builds, guest-interception rejection reason, IPv6-removal reason and February 2026 migration evidence. Preserve uncertainty if originals cannot be recovered. |
+| V12 | Inventory | Laptops/NAS/backups | Actual computer/NAS names and addresses, Synology Drive tasks, Restic scripts/repositories/snapshots and restore evidence; resolve speculative INV-NAS-012 mapping. |
+| V13 | Recovery | Heating automation | Actual hub model/build/address, openHAB versus Home Assistant roles, Legacy API state, custom binding source/JAR and tested heatmiser_summary rule. Confirm any G3/neoFlo change separately. |
+| V14 | Recovery | Media services | Current LXC IDs/addresses, services/versions, exporter files, real schedules/timezone, shared mount mapping/permissions and the outcome of Emby scan/installer experiments. |
+| V15 | History | Complete chat audit | Obtain older conversation turns and original attachments, search unlisted active chats and recover switch diagrams/device inventories. Close only when coverage is explicit and reviewed. |
 
 Suggested first evidence batch: current DNS Director, WAN DNS, LAN DHCP and Guest Network Pro pages, followed by the current script files and `cru l`. Capture existing state before considering edits. Keep credentials, VPN private keys and tokens outside this record; document where the user can retrieve them privately.
 
@@ -244,11 +309,11 @@ For each component record: backup method; contents covered; private storage loca
 3. Promote a change only after the user confirms it works; record the date and evidence. Rejected and superseded work remains visible.
 4. A material firmware/hardware change permits evaluating whether a rejected limitation has changed; it does not automatically overturn the decision.
 5. Add source references for recovered chat details and distinguish user observations from assistant proposals.
-6. Retire an old networking chat only after its unique decisions, failure reasons and useful files are preserved and reviewed by the user. The five historical chats examined here are not yet cleared for deletion: attachments, truncated code and original test evidence remain missing.
+6. Retire an old networking chat only after its unique decisions, failure reasons and useful files are preserved and reviewed by the user. None of the audited networking chats is cleared for deletion: older turns, attachments, some complete code and original test evidence remain missing. Use the coverage ledger rather than equating a returned page with a complete conversation.
 
 ### Repository workflow
 
-- Established project: BlandingsNetwork, `Blarm1959/BlandingsNetwork`; baseline v1.0.1.
+- Established project: BlandingsNetwork, `Blarm1959/BlandingsNetwork`; released baseline v1.0.2 verified in local metadata/tag for this revision.
 - PowerShellTools released baseline supplied by the user: v2.7.4 (S1/S3).
 - Change Package name: `BlandingsNetwork-Changes-v<version>.zip`; filename is the intended release version, not an applied version change.
 - Include only changed files. Normally exclude `release.json`, `build-info.json`, `package-lock.json` and release-history-only README changes. PSTP owns versioning, commits, tags and pushes.
@@ -281,4 +346,8 @@ Use Change Packages and PSTP; do not edit GitHub directly unless I explicitly as
 
 Initial master documentation established core architecture and addressing, Guest Network Pro, Pi-hole/Unbound and WireGuard baseline; preserved VLAN rejection and superseded designs; added verification gaps.
 
-The 4 October 2026 review adds evidence/status distinctions, explicit contradictions, recovered historical context, verification/recovery criteria and chat-retirement rules. It does not assert a new release or newly tested network behaviour.
+### v1.0.2
+
+Released documentation added evidence/status distinctions, explicit contradictions, five archived ASUS/Merlin sources, verification/recovery criteria and chat-retirement rules. Release verified in local metadata and tag during the broader audit.
+
+The broader 4 October 2026 audit adds NAS/laptop/Restic, heating automation, media-service and infrastructure recovery leads plus a coverage ledger. It does not assert a new release or newly tested network behaviour.
