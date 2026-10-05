@@ -26,7 +26,7 @@ All items below are OPEN. Record observation date, source, actual values and use
 | V16 | Inventory | Keyword gaps | Recover Netgear, Raspberry Pi/RPi, Flightradar/FR24 and ADS-B history from unreturned older chats/attachments; record actual devices, addresses and active/retired state only with evidence. |
 | V17 | Inventory | CarFinder LXC | Verify current host/location/CTID/address, service and routes; reconcile candidate 10.83.59.181:8501 with confirmed 10.59 LAN and verify Laptop 1 name. |
 | V18 | Inventory | WDL-Flight-01 | Recover original chat/attachments and verify actual hostname, role, hardware, address/MAC, services, location, connectivity and active/retired status; search remains incomplete. |
-| V19 | Recovery | GarageSwitch | Recover original diagram PDFs and earlier chat turns; verify current switch identity/hostname, management address, port labels, uplink and PoE consumers. Preserve the requested printable label layout. |
+| V19 | Recovery | GarageSwitch | Original numbered map recovered from user text (S28) and diagram reconstructed. Verify current wiring/later changes, port16 neoHub interpretation, blank ports14/15/17/18, management identity/address, router uplink, downstream ports, cable labels and PoE loads. |
 
 Suggested first evidence batch: current DNS Director, WAN DNS, LAN DHCP and Guest Network Pro pages, followed by the current script files and `cru l`. Capture existing state before considering edits. Keep credentials, VPN private keys and tokens outside this record; document where the user can retrieve them privately.
 
@@ -35,7 +35,7 @@ Suggested first evidence batch: current DNS Director, WAN DNS, LAN DHCP and Gues
 For each component record: backup method; contents covered; private storage location; date/version; integrity check; required hardware/software/access; restore steps; dependency order; rollback; test date/result and user confirmation. Until V9/V10 are completed, this file is **not a complete disaster-recovery reference**.
 ## Recovery progress on 5 October 2026 — items stay open
 
-S27 recovers historical router script source (V3), MAC/name/reservation data (V7/V12), named backup sets (V9), Netgear and flight-RPi/FR24 leads (V16/V18), and general garage/loft topology (V19). None is a current live observation or verified restore. V18 now has candidate WDL-RPI3-FLIGHT-01 plus duplicate-MAC conflict. The original numbered-port PDF is still awaited. V16 no longer means no repository evidence for Netgear/RaspberryPi/FR24; its earlier statement describes chat-only coverage.
+S27 recovers historical router script source (V3), MAC/name/reservation data (V7/V12), named backup sets (V9), Netgear and flight-RPi/FR24 leads (V16/V18), and general garage/loft topology (V19). S28 subsequently recovers the numbered garage-port map directly from user text, replacing the need for the lost PDF to preserve those destinations. Current wiring and the other V19 checks remain open. None is a current live observation or verified restore. V18 now has candidate WDL-RPI3-FLIGHT-01 plus duplicate-MAC conflict. V16 no longer means no repository evidence for Netgear/RaspberryPi/FR24; its earlier statement describes chat-only coverage.
 
 | ID | Priority | Area | Evidence needed |
 |---|---|---|---|

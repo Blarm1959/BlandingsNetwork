@@ -19,3 +19,7 @@ flowchart TD
 ```
 
 The diagram represents S27's recorded topology; arrows are not port assignments. See [GarageSwitch.md](GarageSwitch.md), [LoftSwitch.md](LoftSwitch.md) and [FlightReceiver.md](../03-Services/FlightReceiver.md). Recover numbered ports, outlet labels, uplink endpoints, cable labels and current PoE loads from the original PDF or a physical inventory. HomeNetwork's cabling and switch pages and Mermaid files are empty.
+
+## Numbered garage-port evidence recovered (S28)
+
+The user has supplied the original numbered map: garage port **1 → Loft**, **16 → neoHub** (tab-spacing interpretation), plus the room destinations on ports 2–13. See the complete [18-port table and reconstructed diagram](GarageSwitch.md#recovered-original-port-map-s28). Ports 14/15/17/18 remain unspecified. This fills the historical numbered-port gap; current wiring, router uplink, downstream port numbers and PoE loads still need verification.

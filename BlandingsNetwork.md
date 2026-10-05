@@ -1,6 +1,6 @@
 # BlandingsNetwork
 
-**Master record for the Blandings home network.** Read this overview before making recommendations, then follow the relevant section. Documentation review: 5 October 2026; released baseline v1.0.5. This is an unreleased documentation Change Package, not a network change.
+**Master record for the Blandings home network.** Read this overview before making recommendations, then follow the relevant section. Documentation review: 5 October 2026; released baseline v1.0.6. This is an unreleased documentation Change Package, not a network change.
 
 > This file records tested decisions as well as the current configuration. Do not replace a confirmed design with a theoretically preferable alternative unless new evidence or changed hardware/software justifies reopening the decision.
 
@@ -79,7 +79,7 @@ The existence of a fallback address does not establish how or when it is selecte
 
 ## What still needs confirmation
 
-HomeNetwork adds useful historical evidence, not a replacement baseline. It mixes10.0,10.59 and10.83 generations,140 versus210/230 IoT addressing, conflicting DNS Director modes, proposed firewall policy and incomplete script/rebuild inputs. Current GUI and live script evidence remain the first priority. The flight device's fuller name and duplicate MAC need checking; the numbered GarageSwitch PDF is still awaited. All verification items remain open.
+HomeNetwork adds useful historical evidence, not a replacement baseline. It mixes10.0,10.59 and10.83 generations,140 versus210/230 IoT addressing, conflicting DNS Director modes, proposed firewall policy and incomplete script/rebuild inputs. Current GUI and live script evidence remain the first priority. The flight device's fuller name and duplicate MAC need checking; the original GarageSwitch port map has now been recovered from user text (S28), with a reconstructed diagram; current wiring remains to be checked. All verification items remain open.
 
 Use CONFIRMED only for user-confirmed current facts. RELEASED RECORD is retained older documentation; HISTORICAL/VERIFY covers repository snapshots and recovered claims; UNKNOWN stays unknown. Plans, proposed scripts, empty pages and policy statements are not successful tests. No audited networking chat or the old HomeNetwork repository is cleared for deletion.
 
@@ -94,4 +94,9 @@ cd C:\WDL\GitHub\BlandingsNetwork
 
 ## Documentation release lineage
 
-v1.0.1 established the baseline; v1.0.2 added evidence/contradictions; v1.0.3 broadened chat recovery; v1.0.4 added keyword/CarFinder leads; v1.0.5 added device-name/diagram recovery. Local release metadata confirms v1.0.5. This pending change reorganises the record and adds historical HomeNetwork evidence; it does not declare v1.0.6 released.
+v1.0.1 established the baseline; v1.0.2 added evidence/contradictions; v1.0.3 broadened chat recovery; v1.0.4 added keyword/CarFinder leads; v1.0.5 added device-name/diagram recovery. v1.0.6 organised the overview and section files and recovered HomeNetwork evidence. Local release metadata confirms v1.0.6. This pending change adds the user-recovered GarageSwitch port map and a new diagram; it does not declare v1.0.7 released.
+
+
+## Recovered GarageSwitch connections (S28)
+
+The user's original message now preserves all 18 numbered ports: 14 named destinations and four unspecified. See the [complete port table](02-Hardware/GarageSwitch.md#recovered-original-port-map-s28) and [printable diagram](diagrams/GarageSwitch.pdf). The odd/even layout is retained. Current wiring and blank-port use remain verification items.

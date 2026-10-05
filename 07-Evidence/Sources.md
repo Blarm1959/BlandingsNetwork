@@ -57,3 +57,9 @@ Reviewed 5 October 2026 from the clean local checkout of Blarm1959/HomeNetwork a
 The repository contains mutually inconsistent generations. Its architecture pages and exported router lists are historical evidence; their “current”, “verified” and “fully operational” labels are the older author's claims, not new user confirmation. The confirmed S1 baseline remains authoritative. New names, MACs, devices, topology, GUI fields and script behaviour require current verification before promotion.
 
 The router NVRAM export carries its own timestamp: 21 February 2026 at 23:20:13 UTC. The adjacent DHCP CSV has no independent timestamp; treat it as an undated repository snapshot, not a current lease list. Named backup directories indicate collection labels, not successful restore tests. No live equipment was inspected and no recovered script was executed.
+
+## S28 — User-recovered GarageSwitch original message
+
+On 5 October 2026 the user supplied the original Garage Switch / TP Link - TL-SG1218MPE port-destination grid in this working chat. Fourteen numbered destinations are supplied; four are blank. The even-row tab spacing is read as port 16 = neoHub and port 14 blank. The spelling “Studty 1” is normalised to Study 1; Diner is preserved. The [hardware record](../02-Hardware/GarageSwitch.md) contains all 18 rows and the reconstructed PDF/SVG diagram.
+
+This is direct user-supplied historical evidence, stronger than the earlier inaccessible diagram references. The original PDF is lost/unavailable, and the new diagram is a reconstruction. Current wiring, later changes, blank-port use, router uplink, downstream switch ports and PoE state were not independently verified. Do not promote those missing details from inference.
