@@ -30,3 +30,7 @@ The older DNS page specifies WAN Quad9 `9.9.9.11` and `149.112.112.11`, automati
 The dated NVRAM export has custom1 `10.59.20.102`, custom2 `9.9.9.11`, a blank `dnsfilter_enable`, and rule string `<>BC:24:11:B3:11:2B>0`. That MAC belongs to a name-only old Pi-hole label rather than the reserved Pi-hole MAC. Blank fields do not prove enabled or disabled mode, and the rule string is not a verified current exception.
 
 Recovered failover source changes `dnsfilter_custom1`, not WAN DNS, but its copied common_vars uses `10.83.59.102`. See [RouterScripts.md](RouterScripts.md) for source behaviour and implementation limits. No script deployment or GUI change is authorised by this recovery.
+
+## Home LAN Revisit reminders (S29)
+
+The recovered text contains repeated conditional/unconditional re-enable reminders, followed by contradictory keep-disabled advice and inability-to-verify messages. Message attribution and dates are absent. No GUI capture, effective DNS test or reliable user-confirmed enable-state change is supplied. The final automation-paused notice is historical text, not a current automation inspection. These reminders cannot settle the DNS Director ON/OFF or Global Mode questions. [S29 review](../07-Evidence/HomeLANRevisit.md).

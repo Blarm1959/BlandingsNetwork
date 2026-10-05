@@ -41,3 +41,7 @@ S27 recovers historical router script source (V3), MAC/name/reservation data (V7
 |---|---|---|---|
 | V20 | First | HomeNetwork contradictions | Current10.59 versus10.83/10.0 generations;140 versus210/230 grouping; DNS Global Router versusCustom1; actual script versions, Pi-hole MAC exception and effective policy. |
 | V21 | Next | Inventory reconciliation | Current device list/MACs, duplicate flight/Pi-hole labels, unnamed .100, actual LXC CTIDs, firmware/hardware identities and switch/cable maps. |
+
+## Home LAN Revisit recovery progress (S29)
+
+V15 now includes the preserved user-supplied visible transcript; its “Loading older messages…” opening and missing attachments prevent closing the whole-chat audit. V3 gains explicit export-helper requirements, but the referenced final script and outputs still need recovery. V1/V4 stay open: reminder messages are not router state or DNS test evidence. V20 gains an earlier IoT140 draft, without resolving later210/230 policy generations. No verification item was closed by this text recovery.

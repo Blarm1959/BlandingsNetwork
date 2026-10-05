@@ -1,6 +1,6 @@
 # BlandingsNetwork
 
-**Master record for the Blandings home network.** Read this overview before making recommendations, then follow the relevant section. Documentation review: 5 October 2026; released baseline v1.0.7. This is an unreleased documentation Change Package, not a network change.
+**Master record for the Blandings home network.** Read this overview before making recommendations, then follow the relevant section. Documentation review: 5 October 2026; released baseline v2.0.1 (local release metadata). This is an unreleased documentation Change Package, not a network change.
 
 > This file records tested decisions as well as the current configuration. Do not replace a confirmed design with a theoretically preferable alternative unless new evidence or changed hardware/software justifies reopening the decision.
 
@@ -85,7 +85,7 @@ Use CONFIRMED only for user-confirmed current facts. RELEASED RECORD is retained
 
 ## Package/release workflow
 
-This project uses PSTP. Change Packages contain changed files only; PSTP owns release.json, build-info.json, commits, tags and pushes. The README change in this package updates navigation, not release metadata.
+This project uses PSTP. Change Packages contain changed files only; PSTP owns release.json, build-info.json, commits, tags and pushes. This package preserves PSTP-managed metadata and supplies changed documentation/evidence only.
 
 ```powershell
 cd C:\WDL\GitHub\BlandingsNetwork
@@ -94,7 +94,7 @@ cd C:\WDL\GitHub\BlandingsNetwork
 
 ## Documentation release lineage
 
-v1.0.1 established the baseline; v1.0.2 added evidence/contradictions; v1.0.3 broadened chat recovery; v1.0.4 added keyword/CarFinder leads; v1.0.5 added device-name/diagram recovery. v1.0.6 organised the overview and section files and recovered HomeNetwork evidence. v1.0.7 added the recovered GarageSwitch port table and diagram. Local release metadata confirms v1.0.7. This pending change stores diagram sources/builders and section-coverage evidence; it does not declare v1.0.8 released.
+v1.0.1 established the baseline; v1.0.2 added evidence/contradictions; v1.0.3 broadened chat recovery; v1.0.4 added keyword/CarFinder leads; v1.0.5 added device-name/diagram recovery. v1.0.6 organised the overview and section files and recovered HomeNetwork evidence. v1.0.7 added the recovered GarageSwitch port table and diagram. The diagram sources/builders and section-coverage evidence are present in the current checkout. Local release metadata now confirms v2.0.1 after the requested dummy release. This pending v2.0.2 Change Package recovers Home LAN Revisit visible text; it does not declare v2.0.2 released.
 
 
 ## Recovered GarageSwitch connections (S28)
@@ -105,3 +105,7 @@ The user's original message now preserves all 18 numbered ports: 14 named destin
 ## Reusable diagram sources and section coverage
 
 [Diagram source and regeneration](diagrams/README.md) stores structured facts, renderer and instructions for the garage-switch and physical-topology PDFs, SVGs and marked Markdown blocks. Diagrams can now be regenerated without old chats. [Section coverage](07-Evidence/SectionCoverage.md) maps all 18 empty HomeNetwork Markdown placeholders to populated BlandingsNetwork pages. BlandingsNetwork has no zero-length Markdown pages; current verification and tested-recovery gaps remain explicit.
+
+## Home LAN Revisit recovery (S29)
+
+The [supplied visible chat capture and review](07-Evidence/HomeLANRevisit.md) preserve export-helper requirements, earlier IoT planning and the contradictory DNS Director reminder tail. Most topology/address details overlap HomeNetwork. The capture starts “Loading older messages…” and lacks original attachments; it does not complete the whole-chat audit or establish current DNS state.

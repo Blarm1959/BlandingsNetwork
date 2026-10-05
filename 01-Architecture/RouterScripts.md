@@ -46,3 +46,9 @@ Capture current files verbatim before documenting their behaviour. Record each s
 | homenetwork-apply.sh | Writes LAN NVRAM and dnsmasq.conf.add reservations, commits/restarts. | Uses DHCP_START/DHCP_END/DHCP_LEASE while copied common_vars names ROUTER_DHCP_*; set -u can stop execution. Overwrites the dnsmasq addition file. Historical incomplete rebuild input. |
 
 Thresholds 1/1 on a 15-minute schedule are source settings, not a measured outage/recovery guarantee. The complete three Pi-hole script copies plus common_vars are preserved as code-fenced historical evidence in [RecoveredPiHoleSource.md](../07-Evidence/RecoveredPiHoleSource.md). No executable installation files are supplied by this change.
+
+## Export helper requirements recovered from Home LAN Revisit (S29)
+
+Historical user requirements: run on the router without installing Python; use a script-relative `output` folder; produce `router_nvram.txt` and `router_dhcp.csv`; combine reservations, friendly names, MACs/IPs and unreserved connections. The assistant proposal names `router_lists_raw.txt` as the third output. Main Wi-Fi and Guest Network Pro were requested alongside LAN, DHCP and DNS Director fields.
+
+The visible initial shell/awk proposal predates the fully developed script the user says was attached from another chat. Do not substitute that proposal for the final helper or assume its guest NVRAM keys match the installed firmware. Referenced attachments are absent. The S27 source remains separate historical evidence. [S29 review](../07-Evidence/HomeLANRevisit.md) preserves the distinction. A missing lease is not proof that a device is offline.

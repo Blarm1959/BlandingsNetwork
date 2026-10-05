@@ -13,11 +13,11 @@
 
 ### Repository workflow
 
-- Established project: BlandingsNetwork, `Blarm1959/BlandingsNetwork`; released baseline v1.0.5 verified in local metadata and release history for this revision.
+- Established project: BlandingsNetwork, `Blarm1959/BlandingsNetwork`; released baseline v2.0.1 verified in local release metadata for this revision.
 - PowerShellTools released baseline supplied by the user: v2.7.4 (S1/S3).
 - Change Package name: `BlandingsNetwork-Changes-v<version>.zip`; filename is the intended release version, not an applied version change.
 - Include only changed files. Normally exclude `release.json`, `build-info.json`, `package-lock.json` and release-history-only README changes. PSTP owns versioning, commits, tags and pushes.
-- After review, place the package in Windows Downloads and run from the existing project:
+- Provide a clickable Change Package download link. The user downloads it to Windows Downloads; do not write there or request Downloads permission. After review, run from the existing project:
 
 ```powershell
 cd C:\WDL\GitHub\BlandingsNetwork

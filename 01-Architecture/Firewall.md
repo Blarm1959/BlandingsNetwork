@@ -13,3 +13,7 @@ The root README claims a wired MAC allowlist and third-octet behaviour bits. The
 The copied `net-policy-apply.sh` is VLAN-aware, uses a different 10.83/multiple-subnet generation, and is visibly incomplete: commands precede helper definitions and a stray `;;` appears before the phase 4 branch. `firewall-start` would invoke it using stored phase 1–6. Do not deploy it or equate its presence/state file with effective enforcement. Phase descriptions progress from hooks, permissive DNS/WAN and probe logging to blocking and hardening; preserve those as experiment intent.
 
 Read-only recovery requirements: current hook files, `iptables`/bridge rule exports, actual interfaces, counters and relevant logs, with user-confirmed behaviour. Do not claim the same-LAN device isolation goals were achieved merely from address groups or policy prose. No new segmentation design is proposed here.
+
+## Home LAN Revisit discussion handoff (S29)
+
+The user explicitly wanted a separate chat to decide how to handle IoT and whether to use three-bit logic. The supplied starter offers dedicated140 grouping, bit-based policy or a hybrid; it ends with designing before writing rules. This establishes future discussion, not working isolation or a tested/rejected three-bit decision. Keep the confirmed flat LAN and IoT140 baseline. Address grouping alone does not demonstrate effective isolation. [Captured evidence and limits](../07-Evidence/HomeLANRevisit.md).

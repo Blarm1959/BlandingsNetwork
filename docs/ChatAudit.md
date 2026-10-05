@@ -103,3 +103,9 @@ All 21 returned recent ChatGPT conversations were screened. Four supplied materi
 ## Repository recovery update — 5 October 2026
 
 HomeNetwork provides historical evidence for Netgear GS308E, a FR24 Raspberry Pi named WDL-RPI3-FLIGHT-01, full device exports and router scripts, despite the earlier no-match results in returned chat portions. Those chat-search findings describe only their stated scope. See [HomeNetwork review](../07-Evidence/HomeNetworkReview.md) and [device inventory](../01-Architecture/DeviceInventory.md). The numbered garage-port map remains unavailable. The new repository evidence is historical and has not been promoted to live confirmed settings.
+
+## Home LAN Revisit — supplied capture reviewed, 5 October 2026
+
+S29 adds a user-supplied Ctrl-A/Ctrl-C capture identified as Home LAN Revisit. The visible text was read through its final automation-paused notice and preserved with a fingerprint. [Findings and scope](../07-Evidence/HomeLANRevisit.md). This extends coverage beyond previously returned chat listings; it does not imply the complete conversation or original attachments were recovered. Historical export requirements, IoT planning and contradictory DNS reminders are now recorded. No current configuration was promoted.
+
+Correction to the earlier repository-recovery note: S28 subsequently recovered the numbered GarageSwitch map; its reconstructed diagram and source are preserved. Current wiring remains unverified.
