@@ -38,3 +38,7 @@ The recovered text contains repeated conditional/unconditional re-enable reminde
 ## Named DNS chat recovered (S30)
 
 The user confirms saving the generated DNS page in HomeNetwork. Its assistant Global User Defined1 summary matches S27's older page, while S1 remembers Global Router. Documentation acceptance alone does not settle exact live values. User cron output supplies historical installation evidence; no returned outage/recovery test proves the summary's “fully operational” claim. S29a now identifies the Home LAN Revisit reminder tail as assistant messages. V1/V4 remain open. [Review and captures](../07-Evidence/ArchivedChatReview.md).
+
+## Earlier port53 enforcement task (S36)
+
+The copied task summary reports NVRAM_DNS rules generated into nvram_firewall.add: permit TCP/UDP port53 to PIHOLE_IP and PIHOLE_NON_PIHOLE_DNS, block other port53 destinations. No actual rules, variable values or effective packet tests are supplied. The fallback variable is not automatically today's9.9.9.11; guest scope and interaction with DNS Director are unknown. This is historical intent, not a current DNS configuration or installation instruction. [Source and reported checks](../07-Evidence/LegacyMerlinTasks.md#s36--update-iptables-in-nvram_setupsh-for-dns).

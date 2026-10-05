@@ -113,3 +113,7 @@ Correction to the earlier repository-recovery note: S28 subsequently recovered t
 ## Thirteen named archived chats — 5 October 2026
 
 [ArchivedChatReview.md](../07-Evidence/ArchivedChatReview.md) records all thirteen exact requested names, eight found reads and five unlocated titles. Returned histories contain only one to five turns with no older cursor. JSON captures preserve role-labelled returned material, not full histories or attachment files. The available archive now differs from earlier listings; previous counts are historical audit scope, not current account totals. No chat in this batch is cleared for removal.
+
+## Five legacy task summaries supplied after tool access failed
+
+The user reports all five tasks visible after unarchiving, but refreshed listings omit them and the supplied task_e link is rejected by read_thread. On 5 October 2026 the user pasted all five request/summary/testing excerpts. [Preserved review](../07-Evidence/LegacyMerlinTasks.md), sources S36–S40. All thirteen requested titles now have some reviewed material; this remains eight partial chat reads plus five supplied summaries, not thirteen complete chat histories. The original script/test artifacts remain gaps.

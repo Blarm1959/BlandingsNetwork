@@ -1,0 +1,111 @@
+\
+In nvram_setup.sh where iptables entries are added to nvram_firewall.add it needs to add lines to only allow DNS port 53 YCP and UDP on PIHOLE_IP and PIHOLE_NON_PIHOLE_DNS and all other port 53 TCP and UDP is blocked
+
+### Summary
+
+- Added DNS enforcement to the firewall setup, generating a new NVRAM_DNS chain that allows port 53 traffic only to the Pi‑hole IP and designated fallback DNS servers
+- Updated the sample firewall add file with example DNS rules demonstrating the allowed and blocked port 53 behavior
+
+### Testing
+
+- ✅ bash tests/replace_marked_block_test.sh
+- ✅ bash tests/validate_dhcp_res_file_test.sh
+- ✅ bash tests/validate_ssid_consistency_test.sh
+- ✅ bash tests/validate_vlan_sequence_test.sh
+
+
+
+
+
+- \
+  Directory: tests/
+- Create validate_ssid_consistency_test.sh:
+  - Source nvram_setup.sh, stub helper functions as in existing test.
+  - Cover scenarios of invalid/valid SSID and WPA configurations.
+- Create validate_dhcp_res_file_test.sh:
+  - Provide sample reservation files (good and bad).
+  - Assert failure for malformed entries and success for correct ones.
+- Update README.md to mention new tests.
+
+### Summary
+
+- Added validate_ssid_consistency_test.sh to verify that empty SSID and too-short WPA2 passwords fail, while valid SSID and WPA settings pass the check in nvram_setup.sh
+- Added validate_dhcp_res_file_test.sh with sample reservation files ensuring malformed entries (bad MAC) trigger failure and well-formed entries succeed
+- Expanded README with instructions for running the new SSID and DHCP reservation validation tests alongside the existing VLAN test
+
+### Testing
+
+- ✅ bash tests/validate_ssid_consistency_test.sh
+- ✅ bash tests/validate_dhcp_res_file_test.sh
+- ✅ bash tests/validate_vlan_sequence_test.sh
+
+
+
+
+
+
+
+1. \
+   Create tests/validate_vlan_sequence_test.sh.
+2. In the test, source nvram_setup.sh and set a temporary VLAN_LIST with a broken sequence (e.g., missing VLAN 53).
+3. Assert the function exits non‑zero for the broken list and zero for a corrected list.
+4. Document how to run the test (e.g., sh tests/validate_vlan_sequence_test.sh).
+
+### Summary
+
+- Added a Bash test script that sources nvram_setup.sh, stubs out helpers, and verifies validate_vlan_sequence rejects a VLAN list missing ID 53 while accepting a corrected list
+- Documented how to run the new test in the README using bash tests/validate_vlan_sequence_test.sh
+
+### Testing
+
+- ❌ bash tests/validate_vlan_sequence_test.sh (Expected broken VLAN list to fail)
+
+### Notes
+
+- validate_vlan_sequence currently returns success for a broken VLAN sequence, causing the test to fail.
+
+
+
+
+
+1. \
+   Edit nvram_pihole_failover.sh.
+2. Adjust the cron example to /jffs/asus_merlin/3006/nvram_pihole_failover.sh.
+3. Verify the surrounding comment reflects the installation path consistently.
+
+### Summary
+
+- Updated the cron example in nvram_pihole_failover.sh to reference the script’s installed path under /jffs/asus_merlin/3006 and clarified the accompanying comment accordingly
+
+### Testing
+
+- ✅ bash -n nvram_pihole_failover.sh
+
+
+
+
+
+&#x20;\
+In nvram_setup.sh, replace the pipeline in validate_vlan_sequence with a here-doc or here-string so the loop runs in the current shell, e.g.: \
+&#x20;\
+while IFS=',' read -r vid vname voct3 vssid vpass; do \
+&#x20;   ... \
+done <\<EOF \
+$VLAN_LIST \
+EOF \
+Ensure the function exits non‑zero when errs is set. \
+&#x20;\
+Repeat the same pattern for any other validation loops that rely on an external errs variable. \
+&#x20;\
+Summary \
+Refactored validate_vlan_sequence to consume VLAN_LIST through a here-doc, ensuring the loop executes in the current shell and triggers a non-zero exit on accumulated errors \
+Applied the same here-doc approach to check_ssid_consistency, allowing VLAN-derived SSID and PSK validations to propagate errors correctly \
+Testing \
+✅ bash -n nvram_setup.sh \
+✅ NVRAM_VARS_FILE=./nvram_setup_vars bash nvram_setup.sh --help \
+⚠️ shellcheck nvram_setup.sh (command not found) \
+⚠️ apt-get update (repository not signed) \
+&#x20;\
+&#x20;\
+&#x20;\-----------------------------------------\
+THats the 5 copied and pasted

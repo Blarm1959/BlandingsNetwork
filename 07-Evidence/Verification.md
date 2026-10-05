@@ -51,3 +51,7 @@ V15 now includes the preserved user-supplied visible transcript; its “Loading 
 Eight of thirteen requested titles were found; returned histories are partial and five titles remain unlocated. [Per-chat coverage/removal checklist](ArchivedChatReview.md). V15 remains open. S30 strengthens historical cron evidence (V3), S31 strengthens the user-reported VLAN rejection and transitional DNS OFF history (V11), and S32–S35 add Restic paths, user-backed names and four restore comparisons (V9/V10/V12). These do not close live-state or whole-chat recovery checks.
 
 Recover final scripts and successful reruns; verify current task/cron exports, host-label case, NAS identity, restore scope and failed-run handling. Historical tagging is user-reported complete; do not repeat it automatically. No chat in this batch is ready for deletion after this partial read alone.
+
+## Five legacy task excerpts recovered (S36–S40)
+
+All five previously unlocated titles now have user-supplied request/summary/testing excerpts preserved. V15 therefore distinguishes reviewed excerpts from still-missing full histories and artifacts. V3 gains an older failover example path; V11 gains a validator defect and proposed fix, not a live VLAN failure root cause. V1/V4 remain open: generated DNS rules and reported validation passes are not effective current DNS evidence. [LegacyMerlinTasks.md](LegacyMerlinTasks.md).

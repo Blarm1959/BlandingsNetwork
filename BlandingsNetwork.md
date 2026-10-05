@@ -1,6 +1,6 @@
 # BlandingsNetwork
 
-**Master record for the Blandings home network.** Read this overview before making recommendations, then follow the relevant section. Documentation review: 5 October 2026; released baseline v2.0.2 (local release metadata). This is an unreleased documentation Change Package, not a network change.
+**Master record for the Blandings home network.** Read this overview before making recommendations, then follow the relevant section. Documentation review: 5 October 2026; released baseline v2.0.3 (local release metadata). This is an unreleased documentation Change Package, not a network change.
 
 > This file records tested decisions as well as the current configuration. Do not replace a confirmed design with a theoretically preferable alternative unless new evidence or changed hardware/software justifies reopening the decision.
 
@@ -94,7 +94,7 @@ cd C:\WDL\GitHub\BlandingsNetwork
 
 ## Documentation release lineage
 
-v1.0.1 established the baseline; v1.0.2 added evidence/contradictions; v1.0.3 broadened chat recovery; v1.0.4 added keyword/CarFinder leads; v1.0.5 added device-name/diagram recovery. v1.0.6 organised the overview and section files and recovered HomeNetwork evidence. v1.0.7 added the recovered GarageSwitch port table and diagram. The diagram sources/builders and section-coverage evidence are present in the current checkout. The requested dummy release established v2.0.1; local release metadata now confirms v2.0.2, including the Home LAN Revisit visible-text recovery. This pending v2.0.3 package reviews the thirteen named archived chats; it does not declare v2.0.3 released.
+v1.0.1 established the baseline; v1.0.2 added evidence/contradictions; v1.0.3 broadened chat recovery; v1.0.4 added keyword/CarFinder leads; v1.0.5 added device-name/diagram recovery. v1.0.6 organised the overview and section files and recovered HomeNetwork evidence. v1.0.7 added the recovered GarageSwitch port table and diagram. The diagram sources/builders and section-coverage evidence are present in the current checkout. The requested dummy release established v2.0.1; local release metadata now confirms v2.0.2, including the Home LAN Revisit visible-text recovery. Local release metadata confirms v2.0.3 for that review. This pending v2.0.4 package adds the five user-supplied legacy task summaries.
 
 
 ## Recovered GarageSwitch connections (S28)
@@ -113,3 +113,7 @@ The [supplied visible chat capture and review](07-Evidence/HomeLANRevisit.md) pr
 ## Named archived-chat recovery
 
 [Thirteen-chat review and removal checklist](07-Evidence/ArchivedChatReview.md) preserves the eight available reads and identifies five unlocated chats. [Restic/client-backup history](05-Disaster-Recovery/ResticAndClientBackups.md) adds user-backed computer/NAS names, paths, tagging requirements, four restore comparisons and USB-copy failures. Current configuration is unchanged. This pending v2.0.3 package does not mark incomplete chats ready for deletion or declare GitHub updated.
+
+## Five legacy Merlin task summaries recovered
+
+[Legacy Merlin task evidence](07-Evidence/LegacyMerlinTasks.md) preserves all five previously missing summaries: DNS-rule intent, SSID/DHCP validation, a failed VLAN test, older failover path and loop/subshell fix. The [thirteen-chat checklist](07-Evidence/ArchivedChatReview.md) now records partial material for all thirteen. Original files/full histories remain gaps; no current setting is promoted and no script is deployed. This pending v2.0.4 package leaves PSTP-managed metadata unchanged.

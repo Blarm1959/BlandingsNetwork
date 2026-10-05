@@ -63,3 +63,9 @@ User shell output dated 19 February 2026 reports:
 ```
 
 This recovers the historical full path/job label, not current boot registration or effective execution. Keep the second expression literal; do not call it an elapsed seven-day timer. The same output reports `logread: can't find syslogd buffer: No such file or directory`. Assistant `/tmp/syslog.log` and local logfile suggestions are unverified. [Captured source and findings](../07-Evidence/ArchivedChatReview.md#dns-director-configuration-s30).
+
+## Earlier nvram script corrections and validation tests (S36–S40)
+
+[Five legacy task summaries](../07-Evidence/LegacyMerlinTasks.md) now preserve nvram_setup.sh DNS-rule generation, SSID/DHCP tests, the failing VLAN sequence test, and a here-document fix for loop error propagation in validate_vlan_sequence/check_ssid_consistency. Syntax/help checks passed according to the summaries; ShellCheck was unavailable. No original patch or test output was recovered.
+
+The older nvram_pihole_failover.sh cron-example correction points to /jffs/asus_merlin/3006/nvram_pihole_failover.sh. It does not replace the current pihole_failover.sh name, /jffs/blarm paths or common_vars. Preserve historical paths rather than merging generations.

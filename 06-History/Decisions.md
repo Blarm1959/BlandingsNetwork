@@ -57,3 +57,7 @@ Historical generated values in S5/S6/S8 additionally include LAN `10.0.0.0/16` /
 The old 10.0.0.0/8 and 10.52.253.0/24 media design,10.83/multiple-subnet variables, bit-policy and VLAN-aware firewall source are historical/superseded candidates. The newer210/230/250 firewall specification remains an unconfirmed experiment/design document; its effectiveness and deployment are not established. Do not turn it into a newly rejected tested experiment without user evidence.
 
 VLAN goal/testing/result/reason/reopening condition remains D1 above. **DO NOT RECOMMEND AGAIN unless material firmware/hardware change addresses limitation**, or the user explicitly asks. The section-folder layout is being recovered for documentation organisation, not to revive the older architecture.
+
+## Legacy validation defect recovered (S38/S40)
+
+One task reports validate_vlan_sequence wrongly accepting a list missing VLAN53. Another describes a here-document change to preserve errs in the current shell rather than a pipeline subshell, also applied to SSID validation. Exact revision order and regression output are missing. Preserve this software failure/fix history, without declaring it the cause of ASUS VLAN instability or reopening D1. [Five-task evidence](../07-Evidence/LegacyMerlinTasks.md).

@@ -82,3 +82,7 @@ Read on 5 October 2026; [findings and fingerprinted capture register](ArchivedCh
 | S29a | Home LAN Revisit, `6991bdcd-48e0-8392-ba04-e7aed9481063` | 1 available turns; partial capture, originals absent |
 | S31 | Firewall Segmentation Design, `699521fe-2ccc-8394-ba70-a3cfa9fcdfab` | 1 available turns; partial capture, originals absent |
 | S30 | DNS Director Configuration, `6995ed68-ad00-8393-b0b3-6b0448b46bf0` | 5 available turns; partial capture, originals absent |
+
+## S36–S40 — user-copied legacy Merlin task excerpts
+
+Supplied together on 5 October 2026: DNS iptables generation (S36), SSID/DHCP tests (S37), failed VLAN sequence test (S38), failover cron-example path (S39), loop/subshell validation fix (S40). [Review, title mapping and saved-text fingerprint](LegacyMerlinTasks.md). The first task link was unreadable; titles are matched by content to the user's list. Request/summary/test excerpts only, without dates, original code/patches, test logs or full histories. Reported passes are historical task-summary claims, not newly run tests or current equipment observations.

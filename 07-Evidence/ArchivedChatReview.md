@@ -2,7 +2,7 @@
 
 [Master overview](../BlandingsNetwork.md) · [Sources](Sources.md)
 
-Reviewed 5 October 2026 against the local released baseline v2.0.2. This pending v2.0.3 Change Package does not alter network equipment or publish GitHub changes.
+Updated 5 October 2026 against the local released baseline v2.0.3. This pending v2.0.4 Change Package does not alter network equipment or publish GitHub changes.
 
 ## Coverage and removal status
 
@@ -12,11 +12,11 @@ Each found chat was read with the supported maximum ten turns and 20,000 charact
 
 | Requested chat name | Review coverage | Removal status after GitHub release |
 |---|---|---|
-| Update nvram_setup.sh for loop handling | Not found in available listings | Keep: chat link or pasted/exported history needed |
-| Edit nvram_pihole_failover.sh path | Not found in available listings | Keep: chat link or pasted/exported history needed |
-| Add validate_vlan_sequence test | Not found in available listings | Keep: chat link or pasted/exported history needed |
+| Update nvram_setup.sh for loop handling | User-pasted request/summary/tests reviewed (S40) | Full history/code absent; review before removal |
+| Edit nvram_pihole_failover.sh path | User-pasted request/summary/tests reviewed (S39) | Full history/code absent; review before removal |
+| Add validate_vlan_sequence test | User-pasted request/summary/tests reviewed (S38) | Full history/code absent; review before removal |
 | ASUS Merlin setup summary | Found; 5 returned turn(s), source S8a | Keep: earlier history/attachments not recovered |
-| Add tests for SSID and DHCP validation | Not found in available listings | Keep: chat link or pasted/exported history needed |
+| Add tests for SSID and DHCP validation | User-pasted request/summary/tests reviewed (S37) | Full history/code absent; review before removal |
 | Home LAN Revisit | Found; 1 returned turn(s), source S29a | Keep: earlier history/attachments not recovered |
 | DNS Director Configuration | Found; 5 returned turn(s), source S30 | Keep: earlier history/attachments not recovered |
 | Firewall Segmentation Design | Found; 1 returned turn(s), source S31 | Keep: earlier history/attachments not recovered |
@@ -24,7 +24,7 @@ Each found chat was read with the supported maximum ten turns and 20,000 charact
 | Backup strategy improvement | Found; 5 returned turn(s), source S33 | Keep: earlier history/attachments not recovered |
 | Restore and compare restic tags | Found; 5 returned turn(s), source S34 | Keep: earlier history/attachments not recovered |
 | NAS Tidy | Found; 5 returned turn(s), source S35 | Keep: earlier history/attachments not recovered |
-| Update iptables in nvram_setup.sh for DNS | Not found in available listings | Keep: chat link or pasted/exported history needed |
+| Update iptables in nvram_setup.sh for DNS | User-pasted request/summary/tests reviewed (S36) | Full history/code absent; review before removal |
 
 **No chat in this batch is cleared for removal yet.** Preserve earlier unique decisions/test output and original files, review the completed record, then verify the package has been released to GitHub before changing a row to ready. The user remains responsible for removal; this review does not delete or archive any chat.
 
@@ -84,3 +84,7 @@ Returned turns repeat the user's historical locking of uploaded nvram_setup.sh/n
 ## Remaining recovery work
 
 Obtain the five missing chat links or transcripts; recover older turns and original final script/test files from the eight found chats. Preserve actual SSID/DHCP/VLAN validation results rather than inferring tests from their titles. For NAS/Restic, reconcile current jobs, script versions, snapshot host-label case, exact schedules/timezones, marker timing, copy failure handling, locking and private password-file access. Current live evidence is needed for promotion; historical evidence remains valuable even when settings have changed.
+
+## Subsequent recovery of the five missing tasks
+
+The user unarchived these tasks and reports them visible in Recents; refreshed tool listings still omitted their titles. A supplied task link returned “Invalid conversation”. The user then pasted all five request/summary/testing excerpts. [Preserved excerpts and findings](LegacyMerlinTasks.md) cover all five, including the failing VLAN test, proposed loop fix and older cron path. Eight chats have partial tool reads and five tasks have supplied summaries: all thirteen have some recovered material, without whole-history/attachment completeness. Earlier “not found” statements describe the initial tool search, not the later supplied evidence.
