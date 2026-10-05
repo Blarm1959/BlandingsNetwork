@@ -23,6 +23,7 @@ Source: user's original-message transcription supplied on **5 October 2026**, id
 
 The layout follows the supplied odd-numbered top row and even-numbered bottom row. “Studty 1” is normalised to **Study 1**; **Diner** is retained as supplied. The tabbed row is interpreted as **port 16 = neoHub**, with port 14 blank. Ports 14, 15, 17 and 18 have no destination specified; do not infer they are unused or spare.
 
+<!-- DIAGRAM:garage-switch:BEGIN -->
 | Numbered port | Room / destination in original message |
 |---:|---|
 | 1 | Loft |
@@ -43,9 +44,15 @@ The layout follows the supplied odd-numbered top row and even-numbered bottom ro
 | 16 | neoHub |
 | 17 | Not specified |
 | 18 | Not specified |
+<!-- DIAGRAM:garage-switch:END -->
 
 There are **14 named destinations and 4 unspecified destinations**. Port 1 corroborates the earlier loft-link narrative, but the downstream Netgear port and endpoint wiring are not provided. The router uplink port is not identified in this list; do not assign it to a blank port.
 
 ### Remaining verification
 
 Confirm whether any connections have changed since the original message, the port-16 interpretation, blank-port usage, wall-socket/cable labels, loft-switch port, router uplink and actual PoE loads. Add current observations with a date and user confirmation; preserve this original map as history if wiring changes.
+
+
+### Diagram regeneration
+
+The source of the generated table and diagram is [GarageSwitch.json](../diagrams/source/GarageSwitch.json). [Regeneration instructions](../diagrams/README.md) explain how to rebuild the PDF, SVG and table with the stored builder. Edit the JSON and evidence notes together; do not independently edit the marked table or generated images.

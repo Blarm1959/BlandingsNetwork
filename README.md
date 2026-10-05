@@ -15,6 +15,10 @@ The project records both:
 - the **current confirmed network configuration**, and
 - important **tested-and-rejected / superseded designs**, so known dead ends are not repeatedly suggested.
 
+## Stored diagrams
+
+[Diagram source and regeneration](diagrams/README.md) explains how to rebuild printable PDFs, SVGs and linked tables from the stored JSON and builder. [Section coverage](07-Evidence/SectionCoverage.md) maps the older HomeNetwork empty placeholders to populated pages here.
+
 ## Repository workflow
 
 This project uses the same PowerShellTools/PSTP workflow as the other local projects.
@@ -42,6 +46,7 @@ PSTP manages the normal release/version metadata.
 
 | Version | Type | Notes |
 |---------|------|-------|
+| v1.0.8 | Package | Released from imported Change Package. |
 | v1.0.7 | Package | Released from imported Change Package. |
 | v1.0.6 | Package | Released from imported Change Package. |
 | v1.0.5 | Package | Released from imported Change Package. |

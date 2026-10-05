@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "physical-topology",
+  "kind": "topology",
+  "title": "Physical topology",
+  "subtitle": "Garage, loft and room connections",
+  "source": "S27: historical HomeNetwork overview; S28: recovered garage port map",
+  "status": "Historical connections; current wiring and downstream ports unverified",
+  "nodes": [
+    {"id":"ISP","label":"EE Full Fibre 900","x":130,"y":405},
+    {"id":"Router","label":"ASUS RT-AX86U Pro","x":130,"y":315},
+    {"id":"Garage","label":"Garage switch\nTP-Link TL-SG1218MPE","x":365,"y":315},
+    {"id":"Rooms","label":"Room Cat6 runs\nStudy: three sockets","x":660,"y":405},
+    {"id":"Loft","label":"Loft switch\nNetgear GS308E","x":365,"y":230},
+    {"id":"NeoHub","label":"Heatmiser neoHub","x":660,"y":230},
+    {"id":"NAS","label":"Synology NAS","x":175,"y":145},
+    {"id":"PVE","label":"Proxmox pve-01","x":365,"y":145},
+    {"id":"Flight","label":"FR24 Raspberry Pi","x":555,"y":145}
+  ],
+  "edges": [
+    {"from":"ISP","to":"Router","source":"S27","label":null},
+    {"from":"Router","to":"Garage","source":"S27","label":null},
+    {"from":"Garage","to":"Rooms","source":"S27/S28","label":null},
+    {"from":"Garage","to":"Loft","source":"S27/S28","label":"Port 1"},
+    {"from":"Garage","to":"NeoHub","source":"S27/S28","label":"Port 16"},
+    {"from":"Loft","to":"NAS","source":"S27","label":null},
+    {"from":"Loft","to":"PVE","source":"S27","label":null},
+    {"from":"Loft","to":"Flight","source":"S27","label":null}
+  ],
+  "notes": [
+    "Dashed links are recovered historical connections, not a live wiring inspection.",
+    "Port 16 follows the original-row interpretation; router and downstream ports remain unknown."
+  ],
+  "record_path": "02-Hardware/Topology.md",
+  "output_basename": "PhysicalTopology"
+}

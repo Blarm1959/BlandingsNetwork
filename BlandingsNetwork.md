@@ -1,6 +1,6 @@
 # BlandingsNetwork
 
-**Master record for the Blandings home network.** Read this overview before making recommendations, then follow the relevant section. Documentation review: 5 October 2026; released baseline v1.0.6. This is an unreleased documentation Change Package, not a network change.
+**Master record for the Blandings home network.** Read this overview before making recommendations, then follow the relevant section. Documentation review: 5 October 2026; released baseline v1.0.7. This is an unreleased documentation Change Package, not a network change.
 
 > This file records tested decisions as well as the current configuration. Do not replace a confirmed design with a theoretically preferable alternative unless new evidence or changed hardware/software justifies reopening the decision.
 
@@ -94,9 +94,14 @@ cd C:\WDL\GitHub\BlandingsNetwork
 
 ## Documentation release lineage
 
-v1.0.1 established the baseline; v1.0.2 added evidence/contradictions; v1.0.3 broadened chat recovery; v1.0.4 added keyword/CarFinder leads; v1.0.5 added device-name/diagram recovery. v1.0.6 organised the overview and section files and recovered HomeNetwork evidence. Local release metadata confirms v1.0.6. This pending change adds the user-recovered GarageSwitch port map and a new diagram; it does not declare v1.0.7 released.
+v1.0.1 established the baseline; v1.0.2 added evidence/contradictions; v1.0.3 broadened chat recovery; v1.0.4 added keyword/CarFinder leads; v1.0.5 added device-name/diagram recovery. v1.0.6 organised the overview and section files and recovered HomeNetwork evidence. v1.0.7 added the recovered GarageSwitch port table and diagram. Local release metadata confirms v1.0.7. This pending change stores diagram sources/builders and section-coverage evidence; it does not declare v1.0.8 released.
 
 
 ## Recovered GarageSwitch connections (S28)
 
 The user's original message now preserves all 18 numbered ports: 14 named destinations and four unspecified. See the [complete port table](02-Hardware/GarageSwitch.md#recovered-original-port-map-s28) and [printable diagram](diagrams/GarageSwitch.pdf). The odd/even layout is retained. Current wiring and blank-port use remain verification items.
+
+
+## Reusable diagram sources and section coverage
+
+[Diagram source and regeneration](diagrams/README.md) stores structured facts, renderer and instructions for the garage-switch and physical-topology PDFs, SVGs and marked Markdown blocks. Diagrams can now be regenerated without old chats. [Section coverage](07-Evidence/SectionCoverage.md) maps all 18 empty HomeNetwork Markdown placeholders to populated BlandingsNetwork pages. BlandingsNetwork has no zero-length Markdown pages; current verification and tested-recovery gaps remain explicit.

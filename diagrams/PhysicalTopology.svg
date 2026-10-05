@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="842" height="595" preserveAspectRatio="xMinYMin meet" viewBox="0 0 842 595" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="842" height="595"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-595)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="842" height="595" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="34" y="542" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(0%,48%,56%); stroke:none;" transform="translate(0,1084) scale(1,-1)">PHYSICAL TOPOLOGY</text>
+			<text x="34" y="504" style="font-family: Helvetica-Bold; font-size: 29px;fill: rgb(7%,14%,23%); stroke:none;" transform="translate(0,1008) scale(1,-1)">Garage, loft and room connections</text>
+			<text x="34" y="479" style="font-family: Helvetica; font-size: 12px;fill: rgb(34%,41%,49%); stroke:none;" transform="translate(0,958) scale(1,-1)">Historical connections; current wiring and downstream ports unverified</text>
+			<path d="M 34,97 L 808,97 Z" style="stroke: rgb(83%,87%,91%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<text x="34" y="76" style="font-family: Helvetica; font-size: 8px;fill: rgb(34%,41%,49%); stroke:none;" transform="translate(0,152) scale(1,-1)">SOURCE  S27: historical HomeNetwork overview; S28: recovered garage port map</text>
+			<text x="34" y="58" style="font-family: Helvetica; font-size: 8px;fill: rgb(34%,41%,49%); stroke:none;" transform="translate(0,116) scale(1,-1)">Dashed links are recovered historical connections, not a live wiring inspection.</text>
+			<text x="34" y="44" style="font-family: Helvetica; font-size: 8px;fill: rgb(34%,41%,49%); stroke:none;" transform="translate(0,88) scale(1,-1)">Port 16 follows the original-row interpretation; router and downstream ports remain unknown.</text>
+			<path d="M 130,379 L 130,341 Z" style="stroke: rgb(45%,58%,67%); stroke-linecap: butt; stroke-width: 1.5; stroke-dasharray: 4, 3;"/>
+			<polygon points="130 341, 127 349, 133 349" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(45%,58%,67%); fill-rule: evenodd;"/>
+			<path d="M 213,315 L 282,315 Z" style="stroke: rgb(45%,58%,67%); stroke-linecap: butt; stroke-width: 1.5; stroke-dasharray: 4, 3;"/>
+			<polygon points="282 315, 274 312, 274 318" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(45%,58%,67%); fill-rule: evenodd;"/>
+			<path d="M 448,340.322034 L 577,379.677966 Z" style="stroke: rgb(45%,58%,67%); stroke-linecap: butt; stroke-width: 1.5; stroke-dasharray: 4, 3;"/>
+			<polygon points="577 379.678, 570.2236 374.4741, 568.4728 380.2129" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(45%,58%,67%); fill-rule: evenodd;"/>
+			<path d="M 365,289 L 365,256 Z" style="stroke: rgb(45%,58%,67%); stroke-linecap: butt; stroke-width: 1.5; stroke-dasharray: 4, 3;"/>
+			<polygon points="365 256, 362 264, 368 264" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(45%,58%,67%); fill-rule: evenodd;"/>
+			<rect x="373.0" y="278.5" width="46.0" height="15.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="377.0" y="281.5" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(8%,47%,65%); stroke:none;" transform="translate(0,563) scale(1,-1)">Port 1</text>
+			<path d="M 448,291.084746 L 577,253.915254 Z" style="stroke: rgb(45%,58%,67%); stroke-linecap: butt; stroke-width: 1.5; stroke-dasharray: 4, 3;"/>
+			<polygon points="577 253.9153, 568.4821 253.2475, 570.1434 259.0129" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(45%,58%,67%); fill-rule: evenodd;"/>
+			<rect x="520.5" y="278.5" width="46.0" height="15.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="524.5" y="281.5" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(8%,47%,65%); stroke:none;" transform="translate(0,563) scale(1,-1)">Port 16</text>
+			<path d="M 306.882353,204 L 233.117647,171 Z" style="stroke: rgb(45%,58%,67%); stroke-linecap: butt; stroke-width: 1.5; stroke-dasharray: 4, 3;"/>
+			<polygon points="233.1176 171, 239.1951 177.0054, 241.6453 171.5285" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(45%,58%,67%); fill-rule: evenodd;"/>
+			<path d="M 365,204 L 365,171 Z" style="stroke: rgb(45%,58%,67%); stroke-linecap: butt; stroke-width: 1.5; stroke-dasharray: 4, 3;"/>
+			<polygon points="365 171, 362 179, 368 179" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(45%,58%,67%); fill-rule: evenodd;"/>
+			<path d="M 423.117647,204 L 496.882353,171 Z" style="stroke: rgb(45%,58%,67%); stroke-linecap: butt; stroke-width: 1.5; stroke-dasharray: 4, 3;"/>
+			<polygon points="496.8824 171, 488.3547 171.5285, 490.8049 177.0054" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(45%,58%,67%); fill-rule: evenodd;"/>
+			<rect x="47" y="379" width="166" height="52" rx="8" ry="8" style="stroke: rgb(80%,84%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<text x="89.705" y="402" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(7%,14%,23%); stroke:none;" transform="translate(0,804) scale(1,-1)">EE Full Fibre 900</text>
+			<rect x="47" y="289" width="166" height="52" rx="8" ry="8" style="stroke: rgb(80%,84%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<text x="80.55" y="312" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(7%,14%,23%); stroke:none;" transform="translate(0,624) scale(1,-1)">ASUS RT-AX86U Pro</text>
+			<rect x="282" y="289" width="166" height="52" rx="8" ry="8" style="stroke: rgb(80%,84%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<text x="330.82" y="321" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(7%,14%,23%); stroke:none;" transform="translate(0,642) scale(1,-1)">Garage switch</text>
+			<text x="309.705" y="306" style="font-family: Helvetica; font-size: 10px;fill: rgb(7%,14%,23%); stroke:none;" transform="translate(0,612) scale(1,-1)">TP-Link TL-SG1218MPE</text>
+			<rect x="577" y="379" width="166" height="52" rx="8" ry="8" style="stroke: rgb(80%,84%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<text x="621.385" y="411" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(7%,14%,23%); stroke:none;" transform="translate(0,822) scale(1,-1)">Room Cat6 runs</text>
+			<text x="614.7" y="396" style="font-family: Helvetica; font-size: 10px;fill: rgb(7%,14%,23%); stroke:none;" transform="translate(0,792) scale(1,-1)">Study: three sockets</text>
+			<rect x="282" y="204" width="166" height="52" rx="8" ry="8" style="stroke: rgb(80%,84%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<text x="338.61" y="236" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(7%,14%,23%); stroke:none;" transform="translate(0,472) scale(1,-1)">Loft switch</text>
+			<text x="326.925" y="221" style="font-family: Helvetica; font-size: 10px;fill: rgb(7%,14%,23%); stroke:none;" transform="translate(0,442) scale(1,-1)">Netgear GS308E</text>
+			<rect x="577" y="204" width="166" height="52" rx="8" ry="8" style="stroke: rgb(80%,84%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<text x="615.825" y="227" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(7%,14%,23%); stroke:none;" transform="translate(0,454) scale(1,-1)">Heatmiser neoHub</text>
+			<rect x="92" y="119" width="166" height="52" rx="8" ry="8" style="stroke: rgb(80%,84%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<text x="140.55" y="142" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(7%,14%,23%); stroke:none;" transform="translate(0,284) scale(1,-1)">Synology NAS</text>
+			<rect x="282" y="119" width="166" height="52" rx="8" ry="8" style="stroke: rgb(80%,84%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<text x="326.375" y="142" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(7%,14%,23%); stroke:none;" transform="translate(0,284) scale(1,-1)">Proxmox pve-01</text>
+			<rect x="472" y="119" width="166" height="52" rx="8" ry="8" style="stroke: rgb(80%,84%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
+			<text x="510.54" y="142" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(7%,14%,23%); stroke:none;" transform="translate(0,284) scale(1,-1)">FR24 Raspberry Pi</text>
+		</g>
+	</g>
+</svg>

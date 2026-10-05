@@ -93,3 +93,8 @@ SHA256 fingerprints identify reviewed local contents. They are not signed attest
 | `router/legacy/nvram_setup_vars` | 5383 | `92F10970FE348DCB66CD0CD468194CB7C23838BA09CD2FE42F7AB49572914C4B` |
 | `router/legacy/nvram_setup.sh` | 32001 | `355331254D030C652C7685870D8141ABEB4CB0674002945F29A8B5B438FA1760` |
 | `router/legacy/scripts/firewall-start` | 582 | `BA32EC4A904E3781DE48C281BC36696440493FD6B86FEA85334A4B45A37FA822` |
+
+
+## Later recovery and coverage update
+
+S28 subsequently recovered the original garage-switch numbered map from user text; see [GarageSwitch](../02-Hardware/GarageSwitch.md). The lost PDF is no longer needed to preserve those destinations. The [section-coverage audit](SectionCoverage.md) maps all 18 zero-length HomeNetwork Markdown pages to populated records here, and [diagram regeneration](../diagrams/README.md) preserves data, renderer and outputs. The older repository's empty files remain historical placeholders; new development is kept in BlandingsNetwork.

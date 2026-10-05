@@ -13,7 +13,12 @@
 			<rect x="0" y="0" width="842" height="595" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
 			<text x="34" y="542" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(0%,48%,56%); stroke:none;" transform="translate(0,1084) scale(1,-1)">GARAGE SWITCH</text>
 			<text x="34" y="504" style="font-family: Helvetica-Bold; font-size: 29px;fill: rgb(7%,14%,23%); stroke:none;" transform="translate(0,1008) scale(1,-1)">Every port. Every connection.</text>
-			<text x="34" y="479" style="font-family: Helvetica; font-size: 13px;fill: rgb(34%,41%,49%); stroke:none;" transform="translate(0,958) scale(1,-1)">TP-Link TL-SG1218MPE  |  Original port-connection record</text>
+			<text x="34" y="479" style="font-family: Helvetica; font-size: 12px;fill: rgb(34%,41%,49%); stroke:none;" transform="translate(0,958) scale(1,-1)">TP-Link TL-SG1218MPE  |  Original port-connection record</text>
+			<path d="M 34,97 L 808,97 Z" style="stroke: rgb(83%,87%,91%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<text x="34" y="76" style="font-family: Helvetica; font-size: 8px;fill: rgb(34%,41%,49%); stroke:none;" transform="translate(0,152) scale(1,-1)">SOURCE  S28: original user message, recovered 5 October 2026</text>
+			<text x="34" y="58" style="font-family: Helvetica; font-size: 8px;fill: rgb(34%,41%,49%); stroke:none;" transform="translate(0,116) scale(1,-1)">Blank destinations mean not specified; they do not confirm an unused port.</text>
+			<text x="34" y="44" style="font-family: Helvetica; font-size: 8px;fill: rgb(34%,41%,49%); stroke:none;" transform="translate(0,88) scale(1,-1)">Port 16 = neoHub is the tab-spacing interpretation of the supplied original row.</text>
+			<text x="34" y="30" style="font-family: Helvetica; font-size: 8px;fill: rgb(34%,41%,49%); stroke:none;" transform="translate(0,60) scale(1,-1)">Original 'Studty 1' normalised to 'Study 1'; Diner retained as supplied.</text>
 			<rect x="32" y="154" width="778" height="298" rx="14" ry="14" style="stroke: rgb(83%,87%,91%); stroke-linecap: butt; stroke-width: 1; fill: rgb(95%,96%,98%); fill-rule: evenodd;"/>
 			<text x="46" y="431" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(34%,41%,49%); stroke:none;" transform="translate(0,862) scale(1,-1)">TOP ROW / ODD-NUMBERED PORTS</text>
 			<text x="46" y="304" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(34%,41%,49%); stroke:none;" transform="translate(0,608) scale(1,-1)">BOTTOM ROW / EVEN-NUMBERED PORTS</text>
@@ -217,10 +222,6 @@
 			<text x="732.88" y="205" style="font-family: Helvetica; font-size: 8px;fill: rgb(34%,41%,49%); stroke:none;" transform="translate(0,410) scale(1,-1)">Not specified</text>
 			<text x="34" y="118" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(7%,14%,23%); stroke:none;" transform="translate(0,236) scale(1,-1)">14 labelled connections</text>
 			<text x="210" y="118" style="font-family: Helvetica; font-size: 11px;fill: rgb(34%,41%,49%); stroke:none;" transform="translate(0,236) scale(1,-1)">4 ports without a destination in the original message</text>
-			<path d="M 34,97 L 808,97 Z" style="stroke: rgb(83%,87%,91%); stroke-linecap: butt; stroke-width: 0.8;"/>
-			<text x="34" y="76" style="font-family: Helvetica; font-size: 9px;fill: rgb(34%,41%,49%); stroke:none;" transform="translate(0,152) scale(1,-1)">SOURCE  Original user message, recovered 5 October 2026.</text>
-			<text x="34" y="58" style="font-family: Helvetica; font-size: 9px;fill: rgb(34%,41%,49%); stroke:none;" transform="translate(0,116) scale(1,-1)">Blank destinations mean not specified; they do not confirm an unused port.</text>
-			<text x="34" y="40" style="font-family: Helvetica; font-size: 9px;fill: rgb(34%,41%,49%); stroke:none;" transform="translate(0,80) scale(1,-1)">Port 16 = neoHub. &quot;Studty 1&quot; normalised to &quot;Study 1&quot;. Later wiring changes remain to be verified.</text>
 		</g>
 	</g>
 </svg>

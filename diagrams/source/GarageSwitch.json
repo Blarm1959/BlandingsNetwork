@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "garage-switch",
+  "kind": "port-grid",
+  "title": "Garage Switch",
+  "subtitle": "Every port. Every connection.",
+  "model": "TP-Link TL-SG1218MPE",
+  "source": "S28: original user message, recovered 5 October 2026",
+  "status": "Recovered original map; current wiring still requires verification",
+  "port_count": 18,
+  "rows": [[1,3,5,7,9,11,13,15,17],[2,4,6,8,10,12,14,16,18]],
+  "ports": [
+    {"number":1,"destination":"Loft"},
+    {"number":2,"destination":"Study 1"},
+    {"number":3,"destination":"Study 2"},
+    {"number":4,"destination":"Study 3"},
+    {"number":5,"destination":"Hall"},
+    {"number":6,"destination":"Diner"},
+    {"number":7,"destination":"Landing"},
+    {"number":8,"destination":"Lounge"},
+    {"number":9,"destination":"Bedroom 2"},
+    {"number":10,"destination":"Snug"},
+    {"number":11,"destination":"Bedroom 4"},
+    {"number":12,"destination":"Bedroom 1"},
+    {"number":13,"destination":"Bedroom 3"},
+    {"number":14,"destination":null},
+    {"number":15,"destination":null},
+    {"number":16,"destination":"neoHub"},
+    {"number":17,"destination":null},
+    {"number":18,"destination":null}
+  ],
+  "notes": [
+    "Blank destinations mean not specified; they do not confirm an unused port.",
+    "Port 16 = neoHub is the tab-spacing interpretation of the supplied original row.",
+    "Original 'Studty 1' normalised to 'Study 1'; Diner retained as supplied."
+  ],
+  "record_path": "02-Hardware/GarageSwitch.md",
+  "output_basename": "GarageSwitch"
+}

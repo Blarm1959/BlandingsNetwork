@@ -1,0 +1,18 @@
+flowchart TD
+  ISP["EE Full Fibre 900"]
+  Router["ASUS RT-AX86U Pro"]
+  Garage["Garage switch / TP-Link TL-SG1218MPE"]
+  Rooms["Room Cat6 runs / Study: three sockets"]
+  Loft["Loft switch / Netgear GS308E"]
+  NeoHub["Heatmiser neoHub"]
+  NAS["Synology NAS"]
+  PVE["Proxmox pve-01"]
+  Flight["FR24 Raspberry Pi"]
+  ISP -.-> Router
+  Router -.-> Garage
+  Garage -.-> Rooms
+  Garage -. "Port 1" .-> Loft
+  Garage -. "Port 16" .-> NeoHub
+  Loft -.-> NAS
+  Loft -.-> PVE
+  Loft -.-> Flight
