@@ -52,3 +52,14 @@ Thresholds 1/1 on a 15-minute schedule are source settings, not a measured outag
 Historical user requirements: run on the router without installing Python; use a script-relative `output` folder; produce `router_nvram.txt` and `router_dhcp.csv`; combine reservations, friendly names, MACs/IPs and unreserved connections. The assistant proposal names `router_lists_raw.txt` as the third output. Main Wi-Fi and Guest Network Pro were requested alongside LAN, DHCP and DNS Director fields.
 
 The visible initial shell/awk proposal predates the fully developed script the user says was attached from another chat. Do not substitute that proposal for the final helper or assume its guest NVRAM keys match the installed firmware. Referenced attachments are absent. The S27 source remains separate historical evidence. [S29 review](../07-Evidence/HomeLANRevisit.md) preserves the distinction. A missing lease is not proof that a device is offline.
+
+## Historical installed cron evidence (S30)
+
+User shell output dated 19 February 2026 reports:
+
+```cron
+*/15 * * * * /jffs/blarm/scripts/pihole_failover.sh #pihole_failover#
+49 9 */7 * * service restart_letsencrypt #LetsEncrypt#
+```
+
+This recovers the historical full path/job label, not current boot registration or effective execution. Keep the second expression literal; do not call it an elapsed seven-day timer. The same output reports `logread: can't find syslogd buffer: No such file or directory`. Assistant `/tmp/syslog.log` and local logfile suggestions are unverified. [Captured source and findings](../07-Evidence/ArchivedChatReview.md#dns-director-configuration-s30).

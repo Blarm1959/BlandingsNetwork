@@ -67,3 +67,18 @@ This is direct user-supplied historical evidence, stronger than the earlier inac
 ## S29 — Home LAN Revisit, user-pasted visible chat
 
 Supplied by the user on 5 October 2026 as a Ctrl-A/Ctrl-C text attachment, identified by the user as Home LAN Revisit. [Review and fingerprint](HomeLANRevisit.md); [unaltered capture](HomeLANRevisit-Pasted.txt). Starts “Loading older messages…”; dates, structured roles, earlier messages and referenced original attachments are missing. Initial export proposal, later final-script reference, architecture drafts, IoT discussion handoff and contradictory DNS reminder tail are preserved. Assistant operational claims and unattributed reminder lines do not establish current settings or user-confirmed tests. No live equipment was inspected.
+
+## Named archived-chat batch — S8a, S29a, S30–S35
+
+Read on 5 October 2026; [findings and fingerprinted capture register](ArchivedChatReview.md). Structured role labels distinguish direct user observations from assistant proposals. One to five turns returned per chat, despite requests for ten; no older cursor or attachment contents. Not a complete-history audit.
+
+| Source | Chat | Limits |
+|---|---|---|
+| S8a | ASUS Merlin setup summary, `689f6b3e-3924-8332-bcb6-3af0fdf28a16` | 5 available turns; partial capture, originals absent |
+| S35 | NAS Tidy, `692e2f98-a374-8326-acca-c0421b521c4c` | 5 available turns; partial capture, originals absent |
+| S34 | Restore and compare restic tags, `69308031-f08c-8332-84df-c744c4e5c00d` | 5 available turns; partial capture, originals absent |
+| S33 | Backup strategy improvement, `693232fa-6214-8326-b977-43b16e5ec51f` | 5 available turns; partial capture, originals absent |
+| S32 | Restic Stage 2 Tagging, `69332a9d-4290-8323-af4a-d5ec6b93a02a` | 2 available turns; partial capture, originals absent |
+| S29a | Home LAN Revisit, `6991bdcd-48e0-8392-ba04-e7aed9481063` | 1 available turns; partial capture, originals absent |
+| S31 | Firewall Segmentation Design, `699521fe-2ccc-8394-ba70-a3cfa9fcdfab` | 1 available turns; partial capture, originals absent |
+| S30 | DNS Director Configuration, `6995ed68-ad00-8393-b0b3-6b0448b46bf0` | 5 available turns; partial capture, originals absent |

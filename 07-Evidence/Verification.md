@@ -45,3 +45,9 @@ S27 recovers historical router script source (V3), MAC/name/reservation data (V7
 ## Home LAN Revisit recovery progress (S29)
 
 V15 now includes the preserved user-supplied visible transcript; its “Loading older messages…” opening and missing attachments prevent closing the whole-chat audit. V3 gains explicit export-helper requirements, but the referenced final script and outputs still need recovery. V1/V4 stay open: reminder messages are not router state or DNS test evidence. V20 gains an earlier IoT140 draft, without resolving later210/230 policy generations. No verification item was closed by this text recovery.
+
+## Named archived-chat recovery — 5 October 2026
+
+Eight of thirteen requested titles were found; returned histories are partial and five titles remain unlocated. [Per-chat coverage/removal checklist](ArchivedChatReview.md). V15 remains open. S30 strengthens historical cron evidence (V3), S31 strengthens the user-reported VLAN rejection and transitional DNS OFF history (V11), and S32–S35 add Restic paths, user-backed names and four restore comparisons (V9/V10/V12). These do not close live-state or whole-chat recovery checks.
+
+Recover final scripts and successful reruns; verify current task/cron exports, host-label case, NAS identity, restore scope and failed-run handling. Historical tagging is user-reported complete; do not repeat it automatically. No chat in this batch is ready for deletion after this partial read alone.

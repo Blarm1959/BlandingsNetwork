@@ -22,3 +22,7 @@ Router backup availability does not establish Pi-hole/Unbound, PVE/LXC, NAS or s
 Read-only inspection of `./blarm/common/common_vars` inside the 19 February 10.59 and 22 February 10.83 JFFS archives shows different generations. The 10.59 archive has router `10.59.0.1`, mask `255.255.0.0`, DHCP `10.59.250.201–250`, Pi-hole `10.59.20.102` and fallback `9.9.9.11`. The 10.83 archive has router `10.83.0.1`, DHCP `10.83.99.201–250`, Pi-hole `10.83.59.102` and the same fallback. This corroborates that the root copied common_vars is from the later historical generation, without proving either backup was restored successfully or is current. Only named non-secret keys were reported; archive members were not deployed.
 
 For every backup record: coverage, collection date/build, private location, hash/integrity check, prerequisites, dependency order, restore instructions, rollback, test date/result and user confirmation. This is not yet a complete disaster-recovery reference; V9/V10 stay open.
+
+## Restic and client backups recovered from named chats
+
+[Restic/Syncrify and Macrium/USB history](ResticAndClientBackups.md) now preserves S32–S35 paths, names, tagging requirements, four historical restore comparisons and unresolved copy failures. This strengthens the earlier Restic lead; it does not establish full network backup coverage or a currently tested daily pipeline. V9/V10 stay open.

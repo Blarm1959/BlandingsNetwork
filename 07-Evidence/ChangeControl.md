@@ -13,7 +13,7 @@
 
 ### Repository workflow
 
-- Established project: BlandingsNetwork, `Blarm1959/BlandingsNetwork`; released baseline v2.0.1 verified in local release metadata for this revision.
+- Established project: BlandingsNetwork, `Blarm1959/BlandingsNetwork`; released baseline v2.0.2 verified in local release metadata for this revision.
 - PowerShellTools released baseline supplied by the user: v2.7.4 (S1/S3).
 - Change Package name: `BlandingsNetwork-Changes-v<version>.zip`; filename is the intended release version, not an applied version change.
 - Include only changed files. Normally exclude `release.json`, `build-info.json`, `package-lock.json` and release-history-only README changes. PSTP owns versioning, commits, tags and pushes.

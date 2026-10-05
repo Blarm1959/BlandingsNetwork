@@ -109,3 +109,7 @@ HomeNetwork provides historical evidence for Netgear GS308E, a FR24 Raspberry Pi
 S29 adds a user-supplied Ctrl-A/Ctrl-C capture identified as Home LAN Revisit. The visible text was read through its final automation-paused notice and preserved with a fingerprint. [Findings and scope](../07-Evidence/HomeLANRevisit.md). This extends coverage beyond previously returned chat listings; it does not imply the complete conversation or original attachments were recovered. Historical export requirements, IoT planning and contradictory DNS reminders are now recorded. No current configuration was promoted.
 
 Correction to the earlier repository-recovery note: S28 subsequently recovered the numbered GarageSwitch map; its reconstructed diagram and source are preserved. Current wiring remains unverified.
+
+## Thirteen named archived chats — 5 October 2026
+
+[ArchivedChatReview.md](../07-Evidence/ArchivedChatReview.md) records all thirteen exact requested names, eight found reads and five unlocated titles. Returned histories contain only one to five turns with no older cursor. JSON captures preserve role-labelled returned material, not full histories or attachment files. The available archive now differs from earlier listings; previous counts are historical audit scope, not current account totals. No chat in this batch is cleared for removal.

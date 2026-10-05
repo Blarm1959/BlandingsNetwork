@@ -34,3 +34,7 @@ Recovered failover source changes `dnsfilter_custom1`, not WAN DNS, but its copi
 ## Home LAN Revisit reminders (S29)
 
 The recovered text contains repeated conditional/unconditional re-enable reminders, followed by contradictory keep-disabled advice and inability-to-verify messages. Message attribution and dates are absent. No GUI capture, effective DNS test or reliable user-confirmed enable-state change is supplied. The final automation-paused notice is historical text, not a current automation inspection. These reminders cannot settle the DNS Director ON/OFF or Global Mode questions. [S29 review](../07-Evidence/HomeLANRevisit.md).
+
+## Named DNS chat recovered (S30)
+
+The user confirms saving the generated DNS page in HomeNetwork. Its assistant Global User Defined1 summary matches S27's older page, while S1 remembers Global Router. Documentation acceptance alone does not settle exact live values. User cron output supplies historical installation evidence; no returned outage/recovery test proves the summary's “fully operational” claim. S29a now identifies the Home LAN Revisit reminder tail as assistant messages. V1/V4 remain open. [Review and captures](../07-Evidence/ArchivedChatReview.md).

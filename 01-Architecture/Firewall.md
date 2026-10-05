@@ -17,3 +17,9 @@ Read-only recovery requirements: current hook files, `iptables`/bridge rule expo
 ## Home LAN Revisit discussion handoff (S29)
 
 The user explicitly wanted a separate chat to decide how to handle IoT and whether to use three-bit logic. The supplied starter offers dedicated140 grouping, bit-based policy or a hybrid; it ends with designing before writing rules. This establishes future discussion, not working isolation or a tested/rejected three-bit decision. Keep the confirmed flat LAN and IoT140 baseline. Address grouping alone does not demonstrate effective isolation. [Captured evidence and limits](../07-Evidence/HomeLANRevisit.md).
+
+## Historical user brief and proposed bit policy (S31)
+
+The user starter on 17 February 2026 confirms the historical stable flat10.59 network and states VLANs were too unstable on ASUS; it calls three-bit segmentation **planned**. Proposed bits: bit0 cross-group access, bit1 Pi-hole, bit2 media, with infrastructure below100. The same starter reports DNS Director temporarily OFF and backups completed, without backup scope/restore output.
+
+Assistant log-only/NG_LAN_SEG/ipset/bridge-netfilter code has no returned deployment or test result. It includes approximate /17, placeholder /22 and imprecise /16 source-range handling; downstream switch traffic traversal is unverified. Preserve it as an untested proposal, not working isolation. [Detailed review](../07-Evidence/ArchivedChatReview.md#firewall-segmentation-design-s31).

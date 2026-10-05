@@ -15,3 +15,7 @@
 Historical NAS label `Synology_NAS`, MAC `00:11:32:2B:6A:AF`, address `10.59.40.131`, shown in the loft. NFS shares are documented as used by PVE/LXCs, with remounts claimed working in the older overview. Actual NAS model, share/export names, permissions, mount options and restore evidence remain unknown.
 
 Repository-backed laptop candidates: INV-LAP-01-LAN 10.59.120.51 and INV-LAP-01-WiFi 10.59.120.52; historical lease name INV-LAP-01 on LAN. DKL-01 is reserved .56. These strengthen the name/address evidence beyond earlier examples, without changing confirmed current inventory. See the full device export for printers, powerline TL-WPA4220, TVs, phones and other labels. The HP6230 label/reservation is stronger than the prior assistant model suggestion but remains a historical friendly label.
+
+## Stronger user-supplied naming evidence (S32/S35)
+
+The newly recovered backup chats explicitly identify INV-LAP-01, Synology NAS INV-NAS-01 and VPS INV-IONOS-01 in the user's data-flow description. These are historical user-backed names rather than assistant examples. NAS current address/model and VPS current platform/location remain unverified. INV-VPS-Syncrify is a restic snapshot label, not a newly established network device. [Paths, jobs and evidence limits](../05-Disaster-Recovery/ResticAndClientBackups.md).
