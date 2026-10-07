@@ -1,6 +1,6 @@
 # BlandingsNetwork
 
-**Master record for the Blandings home network.** Read this overview before making recommendations, then follow the relevant section. Documentation review: 5 October 2026; released baseline v2.0.3 (local release metadata). This is an unreleased documentation Change Package, not a network change.
+**Master record for the Blandings home network.** Read this overview before making recommendations, then follow the relevant section. Documentation review: 7 October 2026; released baseline v2.0.4. This is a documentation Change Package for the next v3.0.1 release, not a network change.
 
 > This file records tested decisions as well as the current configuration. Do not replace a confirmed design with a theoretically preferable alternative unless new evidence or changed hardware/software justifies reopening the decision.
 
@@ -18,13 +18,13 @@ The user's confirmed baseline takes precedence over old repository/chat claims. 
 | Switch | TP-Link TL-SG1218MPE PoE | S1 |
 | Virtualisation | Proxmox PVE host with LXCs | S1 |
 | Storage | Synology NAS; exact model UNKNOWN | S1 |
-| Heating hub | Heatmiser NeoHub; exact model/version UNKNOWN | S1 |
+| Heating hub | Heatmiser NeoHub; exact current model/version UNKNOWN | S1 |
 | Main LAN | `10.59.0.0/16` | S1 |
 | Router LAN address | `10.59.0.1` | S1 |
 | DHCP pool | `10.59.250.201`–`10.59.250.250` | S1 |
 | Main LAN design | Flat LAN; **NO VLANs** | S1 |
 
-The flat main LAN is a tested decision. Logical address groups are administrative labels within one `/16`; they do not establish separate subnets or security isolation. The deliberate Guest Network Pro service below does not reopen the rejected main-LAN VLAN design. Historical physical topology is now documented in the hardware section; current cabling and numbered port assignments remain unverified.
+The flat main LAN is a tested decision. Logical address groups are administrative labels within one `/16`; they do not establish separate subnets or security isolation. The deliberate Guest Network Pro service below does not reopen the rejected main-LAN VLAN design. Historical physical topology is documented in the hardware section; current cabling and numbered port assignments remain unverified.
 
 ### Address plan and known devices
 
@@ -36,32 +36,32 @@ The flat main LAN is a tested decision. Logical address groups are administrativ
 | Pi-hole + Unbound LXC | `10.59.20.102` | CONFIRMED, S1 |
 | Synology NAS | `10.59.40.131` | CONFIRMED, S1 |
 | Proxmox host | `10.59.60.99` | CONFIRMED, S1 |
-| TP-Link switch | `10.59.60.136` | RELEASED RECORD, S2; recheck address and assignment method |
-| Heatmiser NeoHub | `10.59.60.172` | RELEASED RECORD, S2; recheck address and assignment method |
+| TP-Link switch | `10.59.60.136` | RELEASED RECORD; recheck address and assignment method |
+| Heatmiser NeoHub | `10.59.60.172` | RELEASED RECORD; recheck address and assignment method |
 
-Historical MAC/name/reservation records have now been recovered from HomeNetwork (S27); current assignments, lease duration and a reconciled live inventory remain unverified. S2 also lists a Samsung S23 among trusted devices; its address and current VPN role need verification.
+Historical MAC/name/reservation records have been recovered from HomeNetwork; current assignments, lease duration and a reconciled live inventory remain unverified.
 
 ### Guest Network Pro
 
-- CONFIRMED subnet: `10.52.0.0/24` (S1).
-- CONFIRMED design: guests must **not** depend on Pi-hole; guest DNS uses Quad9 (S1).
+- CONFIRMED subnet: `10.52.0.0/24`.
+- CONFIRMED design: guests must **not** depend on Pi-hole; guest DNS uses Quad9.
 - UNKNOWN: exact Quad9 addresses entered in the guest GUI, guest gateway, DHCP pool, SSID, access-to-intranet setting and effective firewall behaviour.
 
 Do not infer guest isolation rules solely from the separate subnet. Confirm the intended access policy and observed behaviour when recording exact settings.
 
 ### DNS baseline
 
-- CONFIRMED: Pi-hole + local Unbound in an LXC at `10.59.20.102` (S1).
-- CONFIRMED fallback resolver: `9.9.9.11` (S1).
+- CONFIRMED: Pi-hole + local Unbound in an LXC at `10.59.20.102`.
+- CONFIRMED fallback resolver: `9.9.9.11`.
 - UNKNOWN: which router fields implement this fallback, exact forwarding path, Unbound listen address/port, software versions and current failover logic.
 
 The existence of a fallback address does not establish how or when it is selected. DHCP DNS, WAN DNS, DNS Director and guest DNS must be recorded separately.
 
 ### WireGuard
 
-- CONFIRMED router tunnel address: `10.6.0.1/24`; UDP **443**; split tunnel (S1).
+- CONFIRMED router tunnel address: `10.6.0.1/24`; UDP **443**; split tunnel.
 - Derived network: `10.6.0.0/24`.
-- RELEASED RECORD: intended main-LAN route `10.59.0.0/16` and basic connectivity should avoid an unnecessary Pi-hole dependency (S2).
+- RELEASED RECORD: intended main-LAN route `10.59.0.0/16` and basic connectivity should avoid an unnecessary Pi-hole dependency.
 - UNKNOWN: live peer addresses, AllowedIPs, endpoint hostname, peer DNS, keepalive, routes and firewall access.
 
 ## Detailed record
@@ -74,18 +74,19 @@ The existence of a fallback address does not establish how or when it is selecte
 | Rebuild | [Prerequisites and procedure outline](04-Rebuild-Guide/Rebuild.md); not yet a tested rebuild guide. |
 | Disaster recovery | [Backup evidence](05-Disaster-Recovery/Backups.md), [incident evidence/outlines](05-Disaster-Recovery/Incidents.md). |
 | History | [Rejected/superseded decisions](06-History/Decisions.md), [other implementation history](06-History/OtherRecovery.md). |
-| Evidence/control | [Status and sources](07-Evidence/Sources.md), [verification backlog](07-Evidence/Verification.md), [change control/future-chat starter](07-Evidence/ChangeControl.md), [HomeNetwork review](07-Evidence/HomeNetworkReview.md), [historical Pi-hole source](07-Evidence/RecoveredPiHoleSource.md), [frozen v1.0.5 master](07-Evidence/ReleasedRecord-v1.0.5.md). |
-| Chat coverage | [Audit ledger](docs/ChatAudit.md), [keyword/name search](docs/KeywordAudit.md). Older turns, unlisted chats and attachments remain gaps. |
+| Evidence/control | [Status and sources](07-Evidence/Sources.md), [verification backlog](07-Evidence/Verification.md), [change control/future-chat starter](07-Evidence/ChangeControl.md), [7 October chat recovery](07-Evidence/ChatRecovery-2026-10-07.md). |
 
 ## What still needs confirmation
 
-HomeNetwork adds useful historical evidence, not a replacement baseline. It mixes10.0,10.59 and10.83 generations,140 versus210/230 IoT addressing, conflicting DNS Director modes, proposed firewall policy and incomplete script/rebuild inputs. Current GUI and live script evidence remain the first priority. The flight device's fuller name and duplicate MAC need checking; the original GarageSwitch port map has now been recovered from user text (S28), with a reconstructed diagram; current wiring remains to be checked. All verification items remain open.
+Historical material mixes `192.168.1`, `10.0`, `10.83` and the current `10.59` generation, plus conflicting DNS Director designs. Historical addresses and LXC details recovered from old chats must not be silently promoted to the current network.
 
-Use CONFIRMED only for user-confirmed current facts. RELEASED RECORD is retained older documentation; HISTORICAL/VERIFY covers repository snapshots and recovered claims; UNKNOWN stays unknown. Plans, proposed scripts, empty pages and policy statements are not successful tests. No audited networking chat or the old HomeNetwork repository is cleared for deletion.
+Current GUI and live-script evidence remain the first priority: exact Merlin firmware, WAN DNS, LAN DHCP DNS, DNS Director, Guest Network Pro, installed Pi-hole failover scripts/cron, and current Pi-hole/Unbound operation.
+
+Use CONFIRMED only for user-confirmed current facts. RELEASED RECORD is retained older documentation; HISTORICAL/VERIFY covers repository snapshots and recovered claims; UNKNOWN stays unknown. Plans, proposed scripts and old assistant claims are not successful tests.
 
 ## Package/release workflow
 
-This project uses PSTP. Change Packages contain changed files only; PSTP owns release.json, build-info.json, commits, tags and pushes. This package preserves PSTP-managed metadata and supplies changed documentation/evidence only.
+This project uses PSTP. Change Packages contain changed files only; PSTP owns release.json, build-info.json, commits, tags and pushes.
 
 ```powershell
 cd C:\WDL\GitHub\BlandingsNetwork
@@ -94,26 +95,16 @@ cd C:\WDL\GitHub\BlandingsNetwork
 
 ## Documentation release lineage
 
-v1.0.1 established the baseline; v1.0.2 added evidence/contradictions; v1.0.3 broadened chat recovery; v1.0.4 added keyword/CarFinder leads; v1.0.5 added device-name/diagram recovery. v1.0.6 organised the overview and section files and recovered HomeNetwork evidence. v1.0.7 added the recovered GarageSwitch port table and diagram. The diagram sources/builders and section-coverage evidence are present in the current checkout. The requested dummy release established v2.0.1; local release metadata now confirms v2.0.2, including the Home LAN Revisit visible-text recovery. Local release metadata confirms v2.0.3 for that review. This pending v2.0.4 package adds the five user-supplied legacy task summaries.
+v1.0.1 established the baseline; later v1 releases expanded evidence, recovery and diagrams. v2.0.1 was the requested dummy/version-only release. v2.0.2 and v2.0.3 added the Home LAN Revisit and archived-chat recovery work. **v2.0.4 is confirmed released** and contains the five recovered legacy Merlin task excerpts. The next requested Change Package/release is **v3.0.1**.
 
+## Recovered GarageSwitch connections
 
-## Recovered GarageSwitch connections (S28)
+The user's original message preserves all 18 numbered ports: 14 named destinations and four unspecified. See the complete port table in `02-Hardware/GarageSwitch.md` and the reproducible diagram sources. Current wiring and blank-port use remain verification items.
 
-The user's original message now preserves all 18 numbered ports: 14 named destinations and four unspecified. See the [complete port table](02-Hardware/GarageSwitch.md#recovered-original-port-map-s28) and [printable diagram](diagrams/GarageSwitch.pdf). The odd/even layout is retained. Current wiring and blank-port use remain verification items.
+## 7 October 2026 chat-list recovery
 
+[ChatRecovery-2026-10-07.md](07-Evidence/ChatRecovery-2026-10-07.md) records the additional network-related chats visible in the user's current and archived chat lists and the extra historical facts recovered from account conversation context.
 
-## Reusable diagram sources and section coverage
+Important additions include historical Proxmox/NAS mount evidence, older `10.83` media-service details, Emby library/playback evidence, Syncrify-to-NAS paths, and stronger dated NeoHub Gen 2 evidence. These are **historical evidence only** unless separately confirmed against the current `10.59` network.
 
-[Diagram source and regeneration](diagrams/README.md) stores structured facts, renderer and instructions for the garage-switch and physical-topology PDFs, SVGs and marked Markdown blocks. Diagrams can now be regenerated without old chats. [Section coverage](07-Evidence/SectionCoverage.md) maps all 18 empty HomeNetwork Markdown placeholders to populated BlandingsNetwork pages. BlandingsNetwork has no zero-length Markdown pages; current verification and tested-recovery gaps remain explicit.
-
-## Home LAN Revisit recovery (S29)
-
-The [supplied visible chat capture and review](07-Evidence/HomeLANRevisit.md) preserve export-helper requirements, earlier IoT planning and the contradictory DNS Director reminder tail. Most topology/address details overlap HomeNetwork. The capture starts “Loading older messages…” and lacks original attachments; it does not complete the whole-chat audit or establish current DNS state.
-
-## Named archived-chat recovery
-
-[Thirteen-chat review and removal checklist](07-Evidence/ArchivedChatReview.md) preserves the eight available reads and identifies five unlocated chats. [Restic/client-backup history](05-Disaster-Recovery/ResticAndClientBackups.md) adds user-backed computer/NAS names, paths, tagging requirements, four restore comparisons and USB-copy failures. Current configuration is unchanged. This pending v2.0.3 package does not mark incomplete chats ready for deletion or declare GitHub updated.
-
-## Five legacy Merlin task summaries recovered
-
-[Legacy Merlin task evidence](07-Evidence/LegacyMerlinTasks.md) preserves all five previously missing summaries: DNS-rule intent, SSID/DHCP validation, a failed VLAN test, older failover path and loop/subshell fix. The [thirteen-chat checklist](07-Evidence/ArchivedChatReview.md) now records partial material for all thirteen. Original files/full histories remain gaps; no current setting is promoted and no script is deployed. This pending v2.0.4 package leaves PSTP-managed metadata unchanged.
+The review also records which visible chats are already represented in the repository and which titles still need a complete read before deletion. A title being visible, a summary being recovered, or a few turns being available is not sufficient by itself to declare a chat safe to delete.

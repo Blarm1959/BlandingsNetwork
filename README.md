@@ -46,6 +46,7 @@ PSTP manages the normal release/version metadata.
 
 | Version | Type | Notes |
 |---------|------|-------|
+| v3.0.1 | Package | Released from imported Change Package. |
 | v2.0.4 | Package | Released from imported Change Package. |
 | v2.0.3 | Package | Released from imported Change Package. |
 | v2.0.2 | Package | Released from imported Change Package. |
